@@ -1,0 +1,45 @@
+<!<!DOCTYPE html>
+<html>
+	<head>
+		<title>REGISTER</title>	
+	</head>
+	<body bgcolor="PURPLE">
+	<center>
+	<h1>REGISTRATION FORM</h1>
+	</center>
+		<form>
+		<table>
+		<tr>
+		<td>
+		NAME:</td><td> <input type="text" name="txtname" placeholder="ENTER FULL NAME"></td>
+		</tr>
+		<br>
+		<tr>
+		<td>
+		USERNAME:</td><td> <input type="text" name="uname"></td>
+		</tr>
+		<br>
+		<tr>
+		<td>
+		PASSWORD:</td><td> <input type="PASSWORD" name="USER PASSWORD"></td>
+		</tr>
+		<br>
+		<tr>
+		<td>
+		ADDRESS:</td><td> <input type="text" name="ADDERSS"></td>
+		</tr>
+		<tr>
+		<td>
+		GENDER:</td><td> <input type="radio" name="gender" value="male">Male</td>
+			<td><input type="radio" name="gender" value="female">Female</td>
+		</tr>
+		<tr>
+		<td>
+		EDUCATION:</td>
+		<td><input type="checkbox" name="education" value="ug"> UG</td>
+		<td><input type="checkbox" name="education" value="pg"> PG</td>
+		</tr>
+		</form>
+	</body>
+	</html>
+		

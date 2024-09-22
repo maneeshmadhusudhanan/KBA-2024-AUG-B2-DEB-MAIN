@@ -1,0 +1,49 @@
+.header{
+    text-align: center;
+}
+.navbar{list-style: none;
+    background-color: black;
+    padding: 15px;
+    gap: 15px;
+}
+img{float:left;
+
+} 
+a{
+    color:white
+
+}
+
+.coloum{
+    width:30.33%; 
+    height:600px;
+    float:left;
+    border-style:hidden;
+    border-right:5px solid black;
+    padding:30px;
+    box-sizing:border-box;
+    marjin-left:10px;
+    
+    
+
+}
+
+.padd{
+    padding-right:20px;
+}
+.row :after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.killer{
+    margin-left:130px;
+
+
+}
+@media only screen and (max-width:600px)
+{.header{font-size:20px;
+} .coloum{
+    width:100%;
+
+}}

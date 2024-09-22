@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar{
+    display: flex;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    background-color: rgba(226, 112, 192, 0.238);
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+.nav{
+    padding-top: 25px;
+    padding-right: 0px;
+    padding-left: 60%;
+    float: right;
+}
+.nav ul{
+    display: flex;
+    list-style-type: none;
+    
+}
+.nav ul li{
+    padding-left: 40px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.container{
+    width: 650px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: 650px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 25px;
+    background-color:rgba(226, 112, 192, 0.238);
+}
+
+.heading{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color:#000000;
+}
+.form{
+    padding-left: 60px;
+    margin-top: 40px;
+    color:#000000;
+}
+input{
+    width: 500px;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+}
+textarea{
+    width: 500px;
+    height: 100px;
+    border: none;
+}
+.dropdown{
+    width: 505px;
+    height: 40px;
+    color: rgb(68, 66, 66);
+    border: none;
+    background-color: #ffffff;
+}
+.btn{
+    margin-top: 20px;
+    background-color:rgba(226, 112, 192, 0.238);
+    color:#000000;
+    width: 500px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}

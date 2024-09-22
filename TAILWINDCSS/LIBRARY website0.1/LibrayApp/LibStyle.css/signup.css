@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/Css/LibrayApp/Libimages/Hp!.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+
+.screen{
+    box-shadow: 10px 10px 5px #27211d;;
+    text-align: justify;
+    width: 500px;
+    height: 700px;
+    background-color: #c5ae98;
+    border-radius: 30px;
+    margin-left: 800px;
+    margin-top: 80px;
+    padding: 30px;
+    opacity: .9;
+    color:#2c1201;
+    
+
+}
+.signup{
+    margin: 20px;
+    margin-left: 100px;
+
+
+}
+.signup input{
+    width: 300px;
+    height: 40px;
+    opacity: .7;
+}
+.signup p{
+    font-size: 22px;
+}
+.screen input{
+    border-radius: 30px;
+}
