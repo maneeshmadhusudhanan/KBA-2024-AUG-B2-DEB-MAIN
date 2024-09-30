@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    background: #cbd5e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background: linear-gradient(to right, #a0aec0, #edf2f7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(6deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #2d3748;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #dd6b20;
+    background-color: #f7fafc;
+}
+
+/* Content Section Styles */
+.content-container {
+    background: linear-gradient(to right, #e2e8f0, #edf2f7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 32px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #dd6b20;
+    margin-bottom: 24px;
+}
+
+.description-text {
+    font-size: 1.2rem;
+    color: #2d3748;
+    margin-bottom: 24px;
+}
+
+.explore-button {
+    background: linear-gradient(to right, #dd6b20, #f6ad55);
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.explore-button:hover {
+    background: linear-gradient(to left, #f6ad55, #dd6b20);
+    transform: scale(1.1);
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background: white;
+    padding: 16px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    color: #2d3748;
+}

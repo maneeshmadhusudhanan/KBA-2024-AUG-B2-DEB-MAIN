@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>sum of two array  <br> a=[1,2,3,4,5] <br> 
+     b=[6,7,8,9,10]</h3>
+    <script>
+         let a=[1,2,3,4,5]; 
+         let b=[6,7,8,9,10];
+         let c=[]
+
+         if(a.length == b.length){
+            for(let i=0;i<a.length;i++){
+                c[i]=a[i]+b[i]
+            }
+            document.write("sum of a and b array:",c)
+
+            for(x in c){
+                document.write(c[x]);
+            }
+         }
+    </script>
+</body>
+</html>

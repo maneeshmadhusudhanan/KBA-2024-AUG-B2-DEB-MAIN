@@ -4,76 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
-    <link rel="stylesheet" href="/CSS/css/KBA COURSES/style/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="/CSS/css/KBA COURSES/img/images.png" alt="">
-        </div>
-        <div class="nav">
+<body class="bg-slate-300 min-h-screen">
+
+    <!-- Navbar -->
+    <div class="fixed top-0 left-0 w-full bg-slate-500 py-4 ring-2 ring-orange-900 shadow-lg shadow-yellow-600">
+        <div class="flex justify-between items-center px-10">
+            <div class="logo">
+                <img src="/CSS/css/KBA COURSES/img/images.png" alt="Logo" class="h-10 w-auto">
+            </div>
             <nav>
-                <ul>
-                    <li><a href="/CSS/css/KBA COURSES/index.html">HOME</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/courses.html">COURSES</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/contactus.html">CONTACT US</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/add_course.html">ADD COURSES</a></li>
-                    <li><a href="#">LOGOUT</a></li>
+                <ul class="flex space-x-6 text-white font-bold">
+                    <li><a href="/CSS/css/KBA COURSES/index.html" class="hover:text-yellow-400">HOME</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/courses.html" class="hover:text-yellow-400">COURSES</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/contactus.html" class="hover:text-yellow-400">CONTACT US</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/add_course.html" class="hover:text-yellow-400">ADD COURSES</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">LOGOUT</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <!------------------------ navbar ---------------------->
-
-
-    <div class="section2">
-        <div class="course-heading">
-            <h3>
-                ALL COURSES
-            </h3>
+    <!-- Section 2 - Course List -->
+    <div class="pt-32 pb-10">
+        <div class="text-center mb-8">
+            <h3 class="text-4xl font-bold text-slate-700">ALL COURSES</h3>
         </div>
 
-        <div class="course-row">
-            <div class="course-grid">
-                <div class="courses">
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                <!-- Course 1 -->
+                <div class="bg-slate-400 rounded-lg p-6 shadow-lg shadow-yellow-600 ring-2 ring-orange-900">
                     <div class="sub-heading">
-                        <h3>CED</h3>
+                        <h3 class="text-2xl font-bold text-center text-slate-800 mb-4">CED</h3>
                     </div>
-                    <div class="course-img">
-                        <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="">
+                    <div class="course-img mb-4">
+                        <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="Course Image" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="text-orange-900 underline">MORE</a>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <input type="button" value="LEARN MORE" class="w-full py-3 bg-orange-300 rounded-full border-4 border-yellow-700 hover:bg-orange-400 cursor-pointer">
                     </div>
                 </div>
-                <div class="detail">
-                    <a href="">MORE</a>
+
+                <!-- Course 2 -->
+                <div class="bg-slate-400 rounded-lg p-6 shadow-lg shadow-yellow-600 ring-2 ring-orange-900">
+                    <div class="sub-heading">
+                        <h3 class="text-2xl font-bold text-center text-slate-800 mb-4">DER</h3>
+                    </div>
+                    <div class="course-img mb-4">
+                        <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="Course Image" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="text-orange-900 underline">MORE</a>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <input type="button" value="LEARN MORE" class="w-full py-3 bg-orange-300 rounded-full border-4 border-yellow-700 hover:bg-orange-400 cursor-pointer">
+                    </div>
                 </div>
-                <div class="btn">
-                    <input type="button" value="LEARN MORE">
-                </div>
+
             </div>
-
-            <div class="course-grid">
-                <div class="courses">
-                    <div class="sub-heading">
-                        <h3>DER</h3>
-                    </div>
-                    <div class="course-img">
-                        <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="">
-                    </div>
-                </div>
-                <div class="detail">
-                    <a href="">MORE</a>
-                </div>
-                <div class="btn">
-                    <input type="button" value="LEARN MORE">
-                </div>
-            </div>       
         </div>
-
-        <!-- <div class="center-btn">
-                <input type="button" value="View all Courses">
-        </div> -->
-
     </div>
     
 </body>

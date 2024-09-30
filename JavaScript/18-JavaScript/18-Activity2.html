@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+    
+        <h3>11. Compare “Hello World” & “hEllO World” and display the result & its type.</h3>
+    <script>
+        {
+            let str1 = 'Hello World';
+            let str2 = 'hEllO World';
+            let result = str1.localeCompare(str2);
+
+            document.write("result :", result);
+            document.write("<br><br>Type :", typeof result)
+
+        }  
+    </script>
+    <br><br>
+
+
+    <h3>12. Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”</h3>
+    <script>
+        {
+            let age = 20;
+            let bro_age = age + 10;
+
+            document.write(`I am ${age} yrs of old and my brother is 10 yrs older to me. He is now ${bro_age} years old.`);
+
+        }  
+    </script>
+
+
+    <br><br>
+    <h3>13. Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in
+        ____(uppercase).</h3>
+    <script>
+        {
+            let fname = "MANEESH";
+            let lname = "MADHUSUDHANAN";
+            let name = fname + ' ' + lname;
+            let place = "THIRUVANANTHAPURAM";
+            let addName = name.toUpperCase();
+            let addPlace = place.toUpperCase()
+
+            document.write('MY NAME IS ' + addName + '.' + ' I LIVED IN ' + addPlace);
+
+        }  
+    </script>
+    <br><br>
+
+    <h3>14. Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't
+        like'.</h3>
+    <script>
+        {
+            let str1 = "I like to play video games."
+            let str2 = " I don’t like Hide & seek"
+            let str = str1.concat(str2)
+
+            document.write(str);
+
+            let result = str.replaceAll("like", "don't like");
+            document.write('<br><br>', result)
+
+        }  
+    </script>
+    <br><br>
+    <h3>15. Program to find whether the person is eligible for voting using ternary operator</h3>
+
+    <script>
+        let age = 10
+
+        document.write("Age entered: ", age)
+        document.write("<br><br> The candidate is ")
+
+        x = (age > 18) ? document.write("Eligible") : document.write("Not Eligible")
+    </script>
+
+
+<h3>16. Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80
+    return 65 otherwise return 80 (using ternary operator).</h3>
+<br>
+<script>
+    let a = 30;
+    let b = 40
+    let sum = a+ b;
+    document.write(sum)
+
+    let c = (sum > 50) && (sum < 80) ? 65 : 80 ;
+    document.write("<br>  ",c)
+
+</script>
+
+
+</body>
+
+</html>
+    </script>
+    

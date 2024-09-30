@@ -6,101 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- <link rel="stylesheet" href="/CSS/css/KBA COURSES/style/index.css"> -->
 </head>
 
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="/CSS/css/KBA COURSES/img/images.png" alt="">
-        </div>
-        <div class="nav">
+<body class="bg-[#f3e8ff] min-h-screen flex flex-col justify-between">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img src="/CSS/KBAcourse/logokba.jpeg" alt="Logo" class="h-12">
+            </div>
             <nav>
-                <ul>
-                    <li><a href="/CSS/css/KBA COURSES/index.html">HOME</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/courses.html">COURSES</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/contactus.html">CONTACT US</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/add_course.html">ADD COURSES</a></li>
-                    <li><a href="#">LOGOUT</a></li>
+                <ul class="flex space-x-8 text-purple-800 font-semibold">
+                    <li><a href="/CSS/css/KBA COURSES/index.html" class="hover:text-purple-600">Home</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/courses.html" class="hover:text-purple-600">Courses</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/contactus.html" class="hover:text-purple-600">Contact Us</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/add_course.html" class="hover:text-purple-600">Add Courses</a></li>
+                    <li><a href="#" class="hover:text-purple-600">Logout</a></li>
                 </ul>
             </nav>
         </div>
-    </div>
+    </header>
 
-    <!-- ---------------------- navbar------------------------ -->
+    <!-- Contact Us Section -->
+    <section class="text-center py-12">
+        <h2 class="text-purple-800 text-sm font-semibold uppercase mb-4">Contact us</h2>
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Get in touch</h1>
+        <p class="text-gray-500 mb-8">Our friendly team is always here to chat.</p>
 
+        <!-- Contact Cards -->
+        <div class="flex justify-center space-x-12">
 
-
-    <div class="contact-container">
-        <div class="contact-head">
-            <span>Contact Us</span>
-            <h1>GET IN TOUCH</h1>
-            <p>our friendly team is always here to chat</p>
-        </div>
-    </div>
-
-
-    <!--------------------------Conatct---------------------------------->
-
-
-
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/CSS/css/KBA COURSES/img/email.png" alt="">
+            <!-- Email Card -->
+            <div class="text-center">
+                <div class="bg-gray-100 p-6 rounded-full inline-block mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 12l-4 4m0 0l-4-4m4 4V8m0 8l4-4m0 0l-4-4" />
+                    </svg>
                 </div>
-                <div class="card-detail">
-                    <h3>Email</h3>
-                    <p>
-                    Our friendly team is here to help
-                    </p>
-                    <span>
-                     helloworld@gmail.com
-                    </span>
-
-                </div>
+                <h3 class="text-lg font-semibold text-gray-800">Email</h3>
+                <p class="text-gray-500 mb-2">Our friendly team is here to help.</p>
+                <a href="mailto:hello@merakiui.com" class="text-purple-600 hover:underline">hello@merakiui.com</a>
             </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/CSS/css/KBA COURSES/img/phone-call.png" alt="">
-                </div>
-                <div class="card-detail">
-                    <h3>Phone</h3>
-                    <p>
-                        Mon-Frid 8am to 5pm
-                    </p>
-                    <span>
-                        +123 456 789
-                    </span>
 
+            <!-- Office Card -->
+            <div class="text-center">
+                <div class="bg-gray-100 p-6 rounded-full inline-block mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-3.866 2.239-7 5-7s5 3.134 5 7c0 3.866-2.239 7-5 7s-5-3.134-5-7zm-5 0c0 1.338-.317 2.603-.878 3.752C5.392 15.993 8.27 18 12 18s6.608-2.007 7.878-3.248C18.317 13.603 18 12.338 18 11c0-1.338.317-2.603.878-3.752C16.608 8.007 13.73 6 10 6S3.392 8.007 2.122 9.248C1.683 8.397 1 7.338 1 6s.683-2.397 1.122-3.248C2.392 4.007 5.27 2 9 2s6.608 2.007 7.878 3.248C16.317 5.397 16 6.338 16 7c0 1.338-.317 2.603-.878 3.752C14.392 10.993 11.514 12 8 12z" />
+                    </svg>
                 </div>
+                <h3 class="text-lg font-semibold text-gray-800">Office</h3>
+                <p class="text-gray-500 mb-2">Come say hello at our office HQ.</p>
+                <a href="#" class="text-purple-600 hover:underline">100 Smith Street Collingwood VIC 3066 AU</a>
             </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/CSS/css/KBA COURSES/img/location-pin.png" alt="">
-                </div>
-                <div class="card-detail">
-                    <h3>Office</h3>
-                    <p>
-                        Come say hello at our office HQ
-                    </p>
-                    <span>
-                        12h,london
-                    </span>
 
+            <!-- Phone Card -->
+            <div class="text-center">
+                <div class="bg-gray-100 p-6 rounded-full inline-block mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.6V5.4C3 3.6 4.6 2 6.4 2H8.6c.5 0 .9.4 1 .9l1 5c.1.6-.3 1.1-.9 1.2L6 9.2a2 2 0 00-2 2v.6c0 .6.4 1 1 1l5 1c.6.1 1.1-.3 1.2-.9l5-1c.5-.1.9.3 1 .9v2.2c0 1.8-1.6 3.4-3.4 3.4H5.4C3.6 21 2 19.4 2 17.6V15.4c0-.5.4-.9.9-1l5-1c.6-.1 1.1.3 1.2.9l1 5c.1.5-.3 1-.9 1H8.6C7.1 20 6 18.9 6 17.4V15.2c0-.5.4-.9.9-1l5-1c.6-.1 1.1.3 1.2.9l1 5c.1.6-.3 1.1-.9 1.2L6 22.2c-.5.1-.9.6-1 .9v2.4" />
+                    </svg>
                 </div>
+                <h3 class="text-lg font-semibold text-gray-800">Phone</h3>
+                <p class="text-gray-500 mb-2">Mon-Fri from 8am to 5pm.</p>
+                <a href="tel:+1555000000" class="text-purple-600 hover:underline">+1 (555) 000-0000</a>
             </div>
+
         </div>
-    </div>
-
-
-
+    </section>
 
 </body>
 

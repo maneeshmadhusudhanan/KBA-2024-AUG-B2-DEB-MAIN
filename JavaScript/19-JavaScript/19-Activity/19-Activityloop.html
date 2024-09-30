@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <br>
+    <br>
+    <h3>1.Write a program to display the cube of numbers from 10 to 25</h3>
+    <br>
+    <script>
+        for(i=10;i<=25;i++){
+            document.write(i*i*i," ");
+        }
+    </script>
+    <h3>2.Write a program to display the multiplication table for 7.</h3>
+    <br>
+    <script>
+        for (i = 1; i <= 10; i++) {
+            document.write(7 * i, " ")
+        }
+    </script>
+
+<h3>3.Write a program to display first 20 odd numbers and find their sum.</h3>
+<br>
+<script>
+    let x =2
+    for (i = 0; i < 20; i++) {
+        x = x + 2;
+        document.write(x," ")
+    }
+
+</script>
+
+<h3>4.Write a program to check whether a number is palindrome or not</h3>
+    <br>
+    <script>
+
+        document.write("<br> Reverse of a number<br>")
+        let number = 121
+        let copy = number
+        document.write("<br>Number :", number,"<br>")
+        let rev = 0
+        let temp = 0
+        while (number > 0) {
+            temp = number % 10;
+            number = Math.floor(number / 10);
+            rev = (rev * 10) + temp;
+        }
+       
+        if (rev == copy){
+            document.write(`<br> The ${copy} is Palindrome`)
+        }else{
+            document.write(`<br> The ${copy} is not a Palindrome`)
+        }
+
+
+    </script>
+
+<h3>5.Write a program to check whether a number is armstrong or not</h3>
+<br>
+<script>
+    let num = 371;
+    let copys = num
+    let result = 0;
+
+    while (num > 0) {
+        let temp = num % 10;
+        result = result + (temp * temp * temp);
+        num = Math.floor(num / 10);
+    }
+    if (result == copy) {
+        document.write(`<br>${copys} is an amstrong number`)
+    } else {
+        document.write(`<br>${copys} is not an amstrong number`)
+    }
+
+</script>
+
+<h3>6.Write a program to find factorial of a number.</h3>
+    <br>
+    <script>
+        let n = 5;
+        let f = 1;
+        for (i = n; i > 0; i--) {
+            f = f * i;
+        }
+        document.write("Factorial : ", f)
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

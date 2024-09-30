@@ -5,72 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADD COURSE</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- <link rel="stylesheet" href="/CSS/css/KBA COURSES/style/course.css "> -->
 </head>
-<body class="flex justify-center mt-60 bg-slate-300">
-    <div class="">
-        <!-- <div class="logo">
-            <img src="/CSS/css/KBA COURSES/img/images.png" alt="">
-        </div> -->
-        <div class="">
-            <nav>
-                <ul>
-                    <li><a href="/CSS/css/KBA COURSES/index.html">HOME</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/courses.html">COURSES</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/contactus.html">CONTACT US</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/add_course.html">ADD COURSES</a></li>
-                    <li><a href="#">LOGOUT</a></li>
-                </ul>
-            </nav>
+<body class="flex justify-center mt-20 bg-slate-300 min-h-screen">
+
+    <!-- Navbar -->
+    <div class="fixed top-1 left-0 w-full bg-slate-500 shadow-lg py-4 ring-2 ring-orange-900">
+        <nav>
+            <ul class="flex justify-center space-x-8 text-white font-bold">
+                <li><a href="/CSS/css/KBA COURSES/index.html" class="hover:text-yellow-400">HOME</a></li>
+                <li><a href="/CSS/css/KBA COURSES/courses.html" class="hover:text-yellow-400">COURSES</a></li>
+                <li><a href="/CSS/css/KBA COURSES/contactus.html" class="hover:text-yellow-400">CONTACT US</a></li>
+                <li><a href="/CSS/css/KBA COURSES/add_course.html" class="hover:text-yellow-400">ADD COURSES</a></li>
+                <li><a href="#" class="hover:text-yellow-400">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Add Course Form -->
+    <div class="flex justify-center items-center w-full mt-40">
+        <div class="bg-slate-400 w-full md:w-2/3 lg:w-1/2 p-10 rounded-lg shadow-lg shadow-yellow-600 ring-2 ring-orange-900">
+
+            <!-- Heading -->
+            <h2 class="text-3xl font-bold text-center text-slate-700 mb-6">Add Course</h2>
+
+            <form action="" class="space-y-6">
+                <!-- Course Name -->
+                <div>
+                    <label for="course-name" class="block text-lg font-semibold text-gray-700">Course Name:</label>
+                    <input id="course-name" type="text" required class="w-full h-12 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-900" placeholder="Enter course name">
+                </div>
+
+                <!-- Course ID -->
+                <div>
+                    <label for="course-id" class="block text-lg font-semibold text-gray-700">Course ID:</label>
+                    <input id="course-id" type="text" required class="w-full h-12 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-900" placeholder="Enter course ID">
+                </div>
+
+                <!-- Course Type -->
+                <div>
+                    <label for="course-type" class="block text-lg font-semibold text-gray-700">Course Type:</label>
+                    <select id="course-type" required class="w-full h-12 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-900">
+                        <option value="">Select course type</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                    </select>
+                </div>
+
+                <!-- Description -->
+                <div>
+                    <label for="description" class="block text-lg font-semibold text-gray-700">Description:</label>
+                    <textarea id="description" rows="4" required class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-900" placeholder="Enter course description"></textarea>
+                </div>
+
+                <!-- Price -->
+                <div>
+                    <label for="price" class="block text-lg font-semibold text-gray-700">Price:</label>
+                    <select id="price" required class="w-full h-12 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-900">
+                        <option value="">Select price</option>
+                        <option value="1500">$1500</option>
+                        <option value="2000">$2000</option>
+                        <option value="5000">$5000</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="w-full bg-orange-300 text-slate-900 font-bold py-3 rounded-full border-4 border-yellow-700 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-yellow-900">
+                        Add Course
+                    </button>
+                </div>
+            </form>
+
         </div>
     </div>
-<div class="container">
-    <div class="heading">
-        <H2>Add Course</H2>
-    </div>
-    <div class="form">
-        <form action="">
 
-            <h4>Course Name:</h4>
-            <input type="text" required >
-            <h4>Course ID:</h4>
-            <input type="text" required >
-
-            <h4>Course Type</h4>
-
-            <select name="" id="" class="dropdown">
-                <option value="">Hybrid</option>
-                <option value="">Online</option>
-                <Option value="">Offline</Option>
-            </select>
-
-
-            <!-- <h4>Email:</h4>
-            <input type="text" required > -->
-
-            
-            <h4>Description</h4>
-            <textarea ></textarea>
-
-
-            <h4>Price</h4>
-
-            <select name="" id="" class="dropdown">
-                <option value="">1500</option>
-                <option value="">2000</option>
-                <Option value="">5000</Option>
-            </select>
-
-            <h4></h4>
-            <input type="button" class="btn" value="ADD COURSE" required>
-
-            
-            
-        </form>
-    </div>
-
-</div>
-    
 </body>
 </html>

@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    background: linear-gradient(to right, #cbd5e0, #edf2f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Login Container Styles */
+.login {
+    background: linear-gradient(to right, #e2e8f0, #edf2f7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 32px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Title Styles */
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dd6b20;
+    margin-bottom: 24px;
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    color: #2d3748;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #dd6b20;
+}
+
+/* Button Styles */
+.button {
+    margin-top: 16px;
+}
+
+.login-button {
+    background: linear-gradient(to right, #dd6b20, #f6ad55);
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.login-button:hover {
+    background: linear-gradient(to left, #f6ad55, #dd6b20);
+    transform: scale(1.05);
+}
+
+/* Footer Links Styles */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 0.9rem;
+}
+
+.forgot-password {
+    color: #4a5568;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    color: #dd6b20;
+}
+
+.signup-text {
+    color: #dd6b20;
+}
+
+.signup-link {
+    color: #f6ad55;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    color: #dd6b20;
+}

@@ -4,82 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/css/KBA COURSES/style/index.css">
+    <title>Learn More</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="/CSS/css/KBA COURSES/img/images.png" alt="">
-        </div>
-        <div class="nav">
-            <nav>
-                <ul>
-                    <li><a href="/CSS/css/KBA COURSES/index.html">HOME</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/courses.html">COURSES</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/contactus.html">CONTACT US</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/add_course.html">ADD COURSES</a></li>
-                    <li><a href="#">LOGOUT</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <div class="m-3 p-4 bg-white flex justify-between items-center shadow-2xl">
+        <img src="../images/kbalogo.png" alt="Logo" class="p-2 w-12">
+        <nav>
+            <ul class="flex justify-end p-2">
+                <li class="pr-5"><a href="../index.html" class="text-rose-950 hover:text-gray-400">HOME</a></li>
+                <li class="pr-5"><a href="./courses.html" class="text-rose-950 hover:text-gray-400">COURSE</a></li>
+                <li class="pr-5"><a href="./add_course.html" class="text-rose-950 hover:text-gray-400">ADD COURSE</a></li>
+                <li class="pr-5"><a href="./contact.html" class="text-rose-950 hover:text-gray-400">CONTACT</a></li>
+                <li class="pr-5"><a href="./login.html" class="text-rose-950 hover:text-gray-400">LOGOUT</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <!--------------------------Navbar ------------------------------>
+    <!-- Course Section -->
+    <div class="flex justify-center">
+        <div class="w-1/3 h-auto bg-white shadow-2xl mt-4 mb-4 rounded-lg overflow-hidden">
+            <!-- Course Image -->
+            <div class="w-full">
+                <img src="../images/BFP1.png" alt="Course Image" class="w-full h-64 object-cover">
+            </div>
 
+            <!-- Course Info -->
+            <div class="p-4">
+                <!-- Title and Price -->
+                <div class="flex justify-between items-center mt-5">
+                    <span class="text-2xl font-bold text-rose-950">S12</span>
+                    <div class="text-center">
+                        <span class="text-3xl font-bold text-gray-800">$150</span>
+                        <a href="#" class="ml-4 px-6 py-3 bg-rose-950 text-white rounded-xl shadow-lg hover:bg-gray-800">Add to Cart</a>
+                    </div>
+                </div>
 
-    <div class="learn-container">
-        <div class="learn-img">
-            <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="">
+                <!-- Course Description -->
+                <div class="mt-5">
+                    <h3 class="text-lg font-bold text-rose-950">Description</h3>
+                    <p class="mt-2 text-gray-600 text-justify">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nemo accusamus eius amet ut nobis, nesciunt, modi dolorem similique laborum perspiciatis earum mollitia omnis qui numquam labore id quasi excepturi.
+                    </p>
+                </div>
+
+                <!-- Course Prerequisites -->
+                <div class="mt-5">
+                    <h3 class="text-lg font-bold text-rose-950">Prerequisites</h3>
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>Basic understanding of blockchain technology.</li>
+                        <li>Familiarity with programming languages.</li>
+                        <li>Internet access.</li>
+                    </ul>
+                </div>
+
+                <!-- Course Features -->
+                <div class="mt-5">
+                    <h3 class="text-lg font-bold text-rose-950">Features</h3>
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li>40 hours of content</li>
+                        <li>Certificate of completion</li>
+                        <li>Access to community forums</li>
+                        <li>Downloadable resources</li>
+                        <li>24/7 support</li>
+                    </ul>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex justify-end mt-5 mb-2">
+                    <a href="#" class="px-6 py-2 bg-rose-950 text-white rounded-xl shadow-md hover:bg-gray-800">Edit Course</a>
+                    <a href="#" class="ml-4 px-6 py-2 border-2 border-rose-950 text-rose-950 rounded-xl hover:bg-rose-950 hover:text-white">Remove Course</a>
+                </div>
+            </div>
         </div>
-
-        <div class="learn-row">
-            <div class="learn-price">
-                <h1>S12</h1>
-            </div>
-            <div class="learn-addcart">
-                <h2>$150</h2>
-                <input type="button" value="Add to Cart">
-            </div>
-        </div>
-
-        <div class="learn-details">
-            <div class="description">
-                <h3>
-                    Description
-                </h3>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nemo accusamus
-                    eius amet ut nobis, nesciunt, modi dolorem similique laborum perspiciatis earum
-                    mollitia omnis qui numquam labore id quasi excepturi.
-                </p>
-            </div>
-            <div class="prerequest">
-                <h3>Prerequest</h3>
-                <ul>
-                    <li>Basic understanding of blockchain technology.</li>
-                    <li>Familiarity with programming languages </li>
-                    <li>Internet access</li>
-                </ul>
-            </div>
-            <div class="prerequest">
-                <h3>Features</h3>
-                <ul>
-                    <li> 40 hours of conten</li>
-                    <li>Certificate of completion </li>
-                    <li>Access to community forums </li>
-                    <li>Downloadable resources</li>
-                    <li>24/7 support</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="two-button">
-            <input type="button" value="Edit Course" class="blue">
-            <input type="button" value="Remove Course" class="red">
-        </div>
-
     </div>
 </body>
 

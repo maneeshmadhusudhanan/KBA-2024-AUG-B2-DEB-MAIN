@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3>1. Program to swap two numbers using a temporary variable</h3>
+    <br>
+
+    <script>
+        {
+            let x = 3;
+            let y = 9;
+            let swap;
+
+            document.write(`before swap : x=${x} & y=${y}`);
+            swap = x;
+            x = y;
+            y = swap;
+            document.write(`<br>after swap : x=${x} & y=${y}`);
+
+        } 
+    </script>
+
+    <br><br>
+    <h3> 2. Program to swap two numbers w/o using temporary variable</h3>
+
+    <script>
+        {
+            let x = 3;
+            let y = 9;
+
+            document.write(`<br>before swap : x=${x} & y=${y}`);
+
+            x = x + y;
+            y = x - y;
+            x = x - y;
+
+            document.write(`<br>after swap : x=${x} & y=${y}`);
+        } 
+    </script>
+
+    <br><br>
+    <h3>3. Program to convert Celsius to fahrenheit</h3>
+
+    <script>
+        {
+            let x = 3;
+
+            document.write(`<br> Degree Celsius : ${x}`);
+
+            let y = (x * 9.0 / 5.0) + 32.0;
+
+            document.write(`<br> Fahrenheit  : ${y}`);
+
+        } 
+    </script>
+    <br><br>
+    <h3>4. Program to find square of a number</h3>
+    <script>
+        {
+            let x = 9;
+            document.write(`<br> Number :${x}`);
+            let y = x * x;
+            document.write(`<br> Square : ${y}`);
+        } 
+    </script>
+    <br><br>
+    <h3>5. Program to find cube of a number</h3>
+    <script>
+        {
+            let x = 3;
+            document.write(`<br> Number :${x}`);
+
+            let y = x * x * x ;
+
+            document.write(`<br> Cube  : ${y}`);
+        } 
+    </script>
+
+    <br><br>
+    <h3>6. Program to find area of square, circle, rectangle, triangle</h3>
+    <script>
+        {
+            let a = 2;
+            let h = 4;
+            let l = 6;
+            let w = 8;
+            let r = 5;
+            const p = 3.14;
+
+            document.write(`<br> side of square : ${a}`);
+            let square = a * a;
+            document.write(`<br> Area of square : ${square}`);
+
+            document.write(`<br><br>`);
+
+            document.write(`<br> radious of circle : ${r}`);
+            let circle = p * (r * r);
+            document.write(`<br> Area of circle : ${circle}`);
+
+            document.write(`<br><br>`);
+
+            document.write(`<br> length and width of Reactangle : ${l} & ${w}`);
+            let rectangle = l * w;
+            document.write(`<br> Area of Rectangle : ${rectangle}`);
+
+            document.write(`<br><br>`);
+
+            document.write(`<br> base and height of Triangle : ${l} & ${h}`);
+            let triangle = (l * h) / 2;
+            document.write(`<br> Area of Rectangle : ${triangle}`);
+        } 
+    </script>
+
+    <br><br>
+    <h3>7. Program to find perimeter of rectangle, square, circle, triangle</h3>
+    <script>
+        {
+            let a = 2;
+            let h = 3;
+            let l = 4;
+            let w = 6;
+            let r = 8;
+            const p = 3.14;
+
+            document.write(`<br> side of square : ${a}`);
+            let square = 4 * a;
+            document.write(`<br> Perimeter of square : ${square}`);
+            document.write(`<br><br>`);
+            document.write(`<br> radious of circle : ${r}`);
+            let circle = 2 * p * r;
+            document.write(`<br> Perimeter of circle : ${circle}`);
+            document.write(`<br><br>`);
+            document.write(`<br> length and width of Reactangle : ${l} & ${w}`);
+            let rectangle = 2 * (l + w);
+            document.write(`<br> Perimeter of Rectangle : ${rectangle}`);
+            document.write(`<br><br>`);
+            document.write(`<br> 3 sides of Triangle : ${l},${w} & ${h}`);
+            let triangle = l + h + w;
+            document.write(`<br> Perimeter of Rectangle : ${triangle}`);
+        } 
+    </script>
+
+    <br><br>
+    <h3>8. Program to find simple interest & compound interest</h3>
+    <script>
+        {
+            let p = 8000;
+            let t = 12;
+            let r = 4;
+
+            document.write(`<br> Simple Interest`);
+            document.write(`<br>-------------------------`);
+
+            document.write(`<br> P , T & R : ${p}, ${t} & ${r}`);
+            let y = (p * t * r) / 100;
+            document.write(`<br> Interest  : ${y}`);
+
+            document.write(`<br> <br>Compound `);
+            document.write(`<br>-------------------------`);
+
+            document.write(`<br> P , T & R : ${p}, ${t} & ${r}`);
+            let A = p * Math.pow((1 + r / 100), t);
+            let CI = A - p;
+            document.write(`<br> Compound interest  : ${CI}`);
+
+        } 
+    </script>
+
+    <br><br>
+    <h3>9. Program to find largest among two numbers</h3>
+    <script>
+        {
+            let t = 9;
+            let r = 4;
+
+            document.write(`<br> input numbers : ${t} & ${r} `)
+
+            if (t > r) {
+                document.write(`<br> ${t} is larger than ${r}`);
+            }
+            else {
+                document.write(`<br> ${r} is larger than ${t}`);
+            }
+
+        } 
+    </script>
+
+    <br><br>
+    <h3>10. program to find smallest among three numbers</h3>
+    <script>
+        {
+            let t = 9;
+            let r = 4;
+            let p = 6;
+
+            document.write(`<br> input numbers : ${t}, ${r} & ${p}`)
+
+            if (t > r && t > p) {
+                document.write(`<br> ${t} is larger than ${r} & ${p}`);
+            }
+            else if (r > p) {
+                document.write(`<br> ${r} is larger than ${t} & ${p}`);
+            }
+            else {
+                document.write(`<br> ${p} is larger than ${t} & ${r}`);
+            }
+
+        } 
+    </script>
+
+    <br><br>
+    <h3> 11. Program to check the given number is zero,positive and negative </h3>
+    <script>
+        {
+            let t = 18;
+            document.write(`<br> input number :${t}`);
+
+            if (t > 0) {
+                document.write(`<br> ${t} is positive number`);
+            }
+            else if (t < 0) {
+                document.write(`<br> ${t} is negative number`);
+            }
+            else {
+                document.write(`<br> ${t} is Zero`);
+            }
+
+        } 
+    </script>
+
+    </script>
+</body>
+</html>

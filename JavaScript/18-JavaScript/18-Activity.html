@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>1. Program to print a para about yourself using createElement() , textContent & append child.</h3>
+    <br>
+    <div id="paragraph about me">
+
+    </div>
+    <script>
+        {
+            let element = document.createElement("p");  //create a variable to store the tag/element
+            element.innerHTML = "Hello! I am MANEESH MADHUSUDHANAN ,a dedicated full-stack developer with a Post Graduate Diploma in Blockchain Architecture from Kerala Blockchain Academy (KBA). With a strong foundation in MERN stack technologies—MongoDB, Express.js, React.js, and Node.js—I specialize in building dynamic, responsive, and scalable web applications. My expertise extends across the entire development lifecycle, from front-end interfaces to back-end server management, ensuring seamless integration and functionality."; // innerHTML is using to add contents in the p tag (like <p> welcome to dubai </p>)
+            document.getElementById("paragraph about me").appendChild(element); // append the tag in the div, that created in the top which id as  "paragraph about me"
+        }
+
+    </script>
+    <br><br>
+
+
+    <h3>2. Make an unordered list of cinemas on html page using javascript.</h3>
+    <br>
+    <div id="cinimadivid">
+
+    </div>
+    <script>
+        {
+            let element = document.createElement("ul");
+            element = document.createElement("li");
+            element.innerHTML = "IRONMAN"
+            document.getElementById("cinimadivid").appendChild(element);
+
+            element = document.createElement("li");
+            element.innerHTML = "BATMAN"
+            document.getElementById("cinimadivid").appendChild(element);
+
+            element = document.createElement("li");
+            element.innerHTML = "SPIDERMAN"
+            document.getElementById("cinimadivid").appendChild(element);
+        }
+
+    </script>
+    <br><br>
+
+    <h3>3. Create a dropdown for programming language classes offered on html page using javascript. </h3>
+    <br>
+    <div id="DROPDOWNDIV">
+
+    </div>
+    <script>
+
+        let selectInp = document.createElement("select")
+        let option1 = document.createElement("option")
+
+        option1.innerHTML = "HTML"
+        selectInp.appendChild(option1)
+
+        let option2 = document.createElement("option")
+        option2.innerHTML = "JavaScript"
+        selectInp.appendChild(option2)
+
+        let option3 = document.createElement("option")
+        option3.innerHTML = "C++"
+        selectInp.appendChild(option3)
+        document.getElementById("DROPDOWNDIV").appendChild(selectInp)
+    </script>
+    <br><br>
+
+    <h3>4. Create a dropdown containing name of books on the book shop page after List of Book heading.</h3>
+    <br>
+    <div id="Bookid">
+
+    </div>
+    <script>
+        {
+            let selectInp = document.createElement("select")
+            let option1 = document.createElement("option")
+
+            option1.innerHTML = "PHYSICS BOOK"
+            selectInp.appendChild(option1)
+
+            let option2 = document.createElement("option")
+            option2.innerHTML = "CHEMISTBOOK"
+            selectInp.appendChild(option2)
+
+            let option3 = document.createElement("option")
+            option3.innerHTML = "BIOLOGY"
+            selectInp.appendChild(option3)
+            document.getElementById("Bookid").appendChild(selectInp)
+        }
+
+    </script>
+    <br><br>
+
+
+    <h3>5.On the KBA site you created add a radio button showing your experience on KBA(like value1, value2, average).</h3>
+    <br>
+    <div id="RadioID">
+        <div id="value1">
+            <label for="radio">GOOD</label>
+        </div>
+        <div id="value2">
+            <label for="radio">BAD</label>
+        </div>
+        <div id="value3">
+            <label for="radio">AVERAGE</label>
+        </div>
+    </div>
+    <script>
+        {
+            let element = document.createElement("input");
+            element.type = "radio";
+            element.name="review";
+            element.value = "value1";
+            document.getElementById("value1").appendChild(element);
+
+            let element1 = document.createElement("input");
+            element1.type = "radio";
+            element1.name="review";
+            element1.value = "value2";
+            document.getElementById("value2").appendChild(element1);
+
+            let element2 = document.createElement("input");
+            element2.type = "radio";
+            element2.name="review";
+            element2.value = "value3";
+            document.getElementById("value3").appendChild(element2);
+
+        }
+
+    </script>
+    <br><br>
+
+
+    <h3>6.Create a dropdown for list of cakes and print the value of second option.</h3>
+    <br>
+    <div id="ChocolateID"></div>
+
+    <script>
+        {
+            let selectInp = document.createElement("select")
+            let option1 = document.createElement("option")
+            // first option
+            option1.innerHTML = "Chocolate"
+            option1.value = "Chocolate"
+            selectInp.appendChild(option1)
+            // second option
+            let option2 = document.createElement("option")
+            option2.innerHTML = "Dark Chocolate"
+            option2.value = "Dark Chocolate"
+            selectInp.appendChild(option2)
+            // third option
+            let option3 = document.createElement("option")
+            option3.innerHTML = "White Chocolate"
+            option3.value = "White Chocolate"
+            selectInp.appendChild(option3)
+            document.getElementById("ChocolateID").appendChild(selectInp)
+
+            document.write("<br>",option2.value)
+            
+
+
+        }
+
+    </script>
+    <br><br>
+
+
+    <h3>7.Print your full name storing fname & lname. Print in Uppercase.</h3>
+    <br>
+
+    
+    <script>
+        {
+            let fname = "MANEESH"
+            let lname = "Madhusudhanan"
+            let name = fname + ' ' + lname;
+            document.write("<br> Full Name :", name.toUpperCase());
+
+        }
+
+    </script>
+    <br><br>
+
+    <h3>8.“You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it”
+        and combine as a sentence.</h3>
+    <p id="mydiv8"></p>
+
+    <script>
+        const para = "You can study anything if you have a will to do it";
+        const part1 = para.substring(0, 13);
+        document.write(part1, " ");
+
+        const part2 = para.substr(26, 3);
+        document.write(part2, " ");
+
+        const part3 = para.substr(37, 4);
+        document.write(part3, " ");
+
+        const part4 = para.substr(45, 5);
+        document.write(part4, " ");
+
+        document.write("Combine : <br>");
+        document.write(part1 + " " + part2 + " " + part3 + " " + part4);
+    </script>
+    <br><br>
+
+    <h3>9. “MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with
+        Blockchain.
+
+    </h3>
+    <p id="mydiv8"></p>
+
+    <script>
+        let str = 'MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation';
+        document.write(str);
+        let result = str.replaceAll("MongoDB", "Blockchain");
+        document.write("<br><br>", result);
+
+    </script>
+    <br><br>
+
+
+    <h3>10. Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.</h3>
+    <script>
+        {
+            let str = 'MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation';
+            document.write(str.substr(0, 46));
+
+        }  
+    </script>
+
+    

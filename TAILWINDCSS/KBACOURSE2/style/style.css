@@ -1,0 +1,71 @@
+body{
+    background-color: #ce83f4;
+}
+
+.container{
+    width: 600px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: 650px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 25px;
+    background-color: aliceblue;
+}
+
+.heading{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+    color:#8f0ad1;
+}
+.form{
+    padding-left: 60px;
+    margin-top: 40px;
+}
+input{
+    width: 450px;
+    height: 40px;
+}
+.dropdown{
+    width: 450px;
+    height: 40px;
+    color: rgb(68, 66, 66);
+    border: none;
+}
+.btn{
+    margin-left: 180px;
+    margin-top: 20px;
+    background-color: #8f0ad1;
+    color: white;
+    width: 80px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn-signup{
+    margin-left: 0px;
+    margin-top: 20px;
+    background-color: #8f0ad1;
+    color: white;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.text{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.text1{
+    margin-top: 50px;
+    margin-left: 60px;   
+}
+.heading1{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color:#8f0ad1;
+}
+
+/* -------------------   course    ---------------------------- */
+

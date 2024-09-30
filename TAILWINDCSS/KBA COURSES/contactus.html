@@ -4,101 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="/CSS/css/KBA COURSES/style/index.css">
+    <title>COURSE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="/CSS/css/KBA COURSES/img/images.png" alt="">
-        </div>
-        <div class="nav">
+<body class="bg-slate-300 flex justify-center">
+
+    <div class="w-full max-w-5xl bg-slate-400 p-10 m-8 rounded-lg shadow-lg shadow-yellow-600 ring-2 ring-orange-900">
+
+        <!-- Navbar -->
+        <div class="mb-6 p-4 flex justify-between shadow-2xl bg-white rounded-lg">
+            <img src="../images/kbalogo.png" alt="" class="p-2 w-12">
             <nav>
-                <ul>
-                    <li><a href="/CSS/css/KBA COURSES/index.html">HOME</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/courses.html">COURSES</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/contactus.html">CONTACT US</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/add_course.html">ADD COURSES</a></li>
-                    <li><a href="#">LOGOUT</a></li>
+                <ul class="flex justify-end p-2">
+                    <li class="pr-5"><a href="../index.html" class="text-rose-950 hover:text-gray-400">HOME</a></li>
+                    <li class="pr-5"><a href="./courses.html" class="text-rose-950 hover:text-gray-400">COURSE</a></li>
+                    <li class="pr-5"><a href="./add_course.html" class="text-rose-950 hover:text-gray-400">ADD COURSE</a></li>
+                    <li class="pr-5"><a href="./contact.html" class="text-rose-950 hover:text-gray-400">CONTACT</a></li>
+                    <li class="pr-5"><a href="./login.html" class="text-rose-950 hover:text-gray-400">LOGOUT</a></li>
                 </ul>
             </nav>
         </div>
-    </div>
 
-    <!-- ---------------------- navbar------------------------ -->
-
-
-
-    <div class="contact-container">
-        <div class="contact-head">
-            <span>Contact Us</span>
-            <h1>GET IN TOUCH</h1>
-            <p>our friendly team is always here to chat</p>
+        <!-- Contact Section -->
+        <div class="text-center mb-14">
+            <span class="text-rose-950 font-bold text-2xl">Contact Us</span>
+            <h1 class="text-5xl font-extrabold mt-5">GET IN TOUCH</h1>
+            <p class="mt-5 tracking-wider">Our friendly team is always here to chat</p>
         </div>
-    </div>
 
+        <!-- Contact Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-    <!--------------------------Conatct---------------------------------->
-
-
-
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/CSS/css/KBA COURSES/img/email.png" alt="">
+            <!-- Email Card -->
+            <div class="bg-white shadow-md p-6 text-center rounded-lg">
+                <div class="flex justify-center mb-5">
+                    <img src="/CSS/css/KBA COURSES/img/email.png" alt="Email Icon" class="w-12 h-12">
                 </div>
-                <div class="card-detail">
-                    <h3>Email</h3>
-                    <p>
-                    Our friendly team is here to help
-                    </p>
-                    <span>
-                     helloworld@gmail.com
-                    </span>
-
-                </div>
+                <h3 class="text-2xl font-bold mb-2">Email</h3>
+                <p class="mb-2">Our friendly team is here to help</p>
+                <span class="text-rose-950 font-semibold">helloworld@gmail.com</span>
             </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/CSS/css/KBA COURSES/img/phone-call.png" alt="">
-                </div>
-                <div class="card-detail">
-                    <h3>Phone</h3>
-                    <p>
-                        Mon-Frid 8am to 5pm
-                    </p>
-                    <span>
-                        +123 456 789
-                    </span>
 
+            <!-- Phone Card -->
+            <div class="bg-white shadow-md p-6 text-center rounded-lg">
+                <div class="flex justify-center mb-5">
+                    <img src="/CSS/css/KBA COURSES/img/phone-call.png" alt="Phone Icon" class="w-12 h-12">
                 </div>
+                <h3 class="text-2xl font-bold mb-2">Phone</h3>
+                <p class="mb-2">Mon-Fri 8am to 5pm</p>
+                <span class="text-rose-950 font-semibold">+123 456 789</span>
             </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-img">
-                    <img src="/CSS/css/KBA COURSES/img/location-pin.png" alt="">
-                </div>
-                <div class="card-detail">
-                    <h3>Office</h3>
-                    <p>
-                        Come say hello at our office HQ
-                    </p>
-                    <span>
-                        12h,london
-                    </span>
 
+            <!-- Office Card -->
+            <div class="bg-white shadow-md p-6 text-center rounded-lg">
+                <div class="flex justify-center mb-5">
+                    <img src="/CSS/css/KBA COURSES/img/location-pin.png" alt="Office Icon" class="w-12 h-12">
                 </div>
+                <h3 class="text-2xl font-bold mb-2">Office</h3>
+                <p class="mb-2">Come say hello at our office HQ</p>
+                <span class="text-rose-950 font-semibold">12h, London</span>
             </div>
+
         </div>
+
     </div>
-
-
-
 
 </body>
 

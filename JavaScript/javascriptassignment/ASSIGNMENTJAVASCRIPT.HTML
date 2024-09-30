@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js AssIgnment2</title>
+</head>
+<body>
+    <script>
+        //swapping two no using Temp
+        let a=10;
+        let b=20;
+        let temp;
+
+        temp=a;
+        a=b;
+        b=temp;
+
+        document.write(`The value of a ${a}`,"<br>");
+        document.write(`The value of b ${b}`,"<br>") ;
+
+        //square of a No
+
+        let x=3;
+        y=x*x;
+        document.write(`The Square of x is ${y}`,"<br>")
+
+        //cube of a number
+        let z=3;
+        k=x*x*x;
+        document.write(`The Square of x is ${k}`,"<br>")
+
+         //swapping two no without using Temp
+
+    {
+     
+        let a=10;
+        let b=5;
+
+        b=a+b 
+        a=b-a;
+        b=a-b
+        document.write(`The value of a ${a}`,"<br>")
+        document.write(`The value of b ${b}`,"<br>") 
+    }
+    //Program to convert Celsius to fahrenheit
+    {
+            let x = 5;
+            document.write("<br>",` Degree Celsius : ${x}`);
+
+            let y = (x * 9.0 / 5.0) + 32.0;
+
+            document.write("<br>" ,`Fahrenheit  : ${y}`);
+        } 
+//Program to find area of square, circle, rectangle, triangle
+{
+            let a = 5;
+            let h = 3;
+            let l = 2;
+            let w = 4;
+            let r = 6;
+            const p = 3.14;
+
+            document.write("<br>",`side of square : ${a}`);
+            let square = a * a;
+            document.write("<br>",` Area of square : ${square}`);
+
+            document.write("<br><br>");
+
+            document.write("<br>",` radius of circle : ${r}`);
+            let circle = p * (r * r);
+            document.write("<br>",` Area of circle : ${circle}`);
+
+            document.write("<br><br>");
+
+            document.write("<br>",` length and width of Reactangle : ${l} & ${w}`);
+            let rectangle = l * w;
+            document.write("<br>",`Area of Rectangle : ${rectangle}`);
+
+            document.write("<br><br>");
+
+            document.write("<br>",` base and height of Triangle : ${l} & ${h}`);
+            let triangle = (l * h) / 2;
+            document.write("<br> ",`Area of Rectangle : ${triangle}`);
+}
+//Program to find perimeter of square, circle, rectangle, triangle
+
+{
+            let a = 5;
+            let h = 3;
+            let l = 2;
+            let w = 4;
+            let r = 6;
+            const p = 3.14;
+
+            document.write("<br>" ,`side of square : ${a}`);
+            let square = 4 * a;
+            document.write("<br> ",`Perimeter of square : ${square}`);
+
+            document.write("<br><br>");
+
+            document.write("<br> ",`radious of circle : ${r}`);
+            let circle = 2 * p * r;
+            document.write("<br>" ,`Perimeter of circle : ${circle}`);
+
+            document.write("<br><br>");
+
+            document.write("<br> ",`length and width of Reactangle : ${l} & ${w}`);
+            let rectangle = 2 * (l + w);
+            document.write("<br> ",`Perimeter of Rectangle : ${rectangle}`);
+
+            document.write("<br><br>");
+
+            document.write("<br> ",`3 sides of Triangle : ${l},${w} & ${h}`);
+            let triangle = l + h + w;
+            document.write("<br> ",`Perimeter of Rectangle : ${triangle}`);
+        } 
+//Program to find simple interest & compound interest
+        {
+            let p = 50000;
+            let t = 10;
+            let r = 3;
+
+            document.write("<br> ",`Simple Interest`);
+            document.write("<br> ",`P , T & R : ${p}, ${t} & ${r}`);
+            let y = (p * t * r) / 100;
+            document.write("<br>",` Interest  : ${y}`);
+
+            document.write("<br> <br>",`Compound `);
+            // document.write(<"br>"-------------------------);
+            document.write("<br>",` P , T & R : ${p}, ${t} & ${r}`);
+            let A = p * Math.pow((1 + r / 100), t);
+            let CI = A - p;
+            document.write("<br> ",`Compound interest  : ${CI}`);
+
+        } 
+        //program to find smallest among three numbers
+
+        {
+            let t = 10;
+            let r = 3;
+            let p = 7;
+            if (t > r && t> p) {
+                document.write("<br>" ,`${t} is larger than ${r} & ${p}`);
+            }
+            else if(r>p){
+                document.write("<br> ",`${r} is larger than ${t} & ${p}`);
+            }
+            else{
+                document.write("<br>",`${p} is larger than ${t} & ${r}`);
+            }
+        }
+        //Program to check the given number is zero,positive and negative
+        {
+        let t = 10;
+        
+        if (t > 0 ) {
+            document.write("<br> ",`${t} is posaitive number`);
+        }
+        else if(t<0){
+            document.write("<br> ",`${t} is negative number`);
+        }
+        else{
+            document.write("<br>",` ${t} is Zero`);
+        }
+
+    } 
+
+    </script>
+    
+</body>
+</html>

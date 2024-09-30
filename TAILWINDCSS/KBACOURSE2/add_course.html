@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-fuchsia-200">
+    <nav class="flex justify-between p-5 bg-slate-400 shadow-xl shadow-indigo-700">
+        <div class="py-3 " >
+          <img src="/Css/images/img.png" class="w-14 h-12">
+        </div>
+        <div class="p-5 hover text-xl font-bold text-indigo-900  space-x-4">
+            <a href="/Tailwind/14-Tailwind/homepage_htmlfile.html">Home</a>
+            <a href="/Tailwind/14-Tailwind/courses.html">course</a>
+            <a href="/Tailwind/14-Tailwind/AddCourse.html">Add Courses</a>
+            <a href="/Tailwind/14-Tailwind/Contact.html">Contact Us</a>
+            <a href="/Tailwind/14-Tailwind/Login.html">Logout</a>
+          </div>
+      </nav>
+    <div class="flex justify-center">
+        <div class=" bg-slate-400 w-96 h-100 max-h-max p-8 rounded-lg shadow-xl shadow-indigo-700 mt-32">
+            <p class="text-3xl font-mono font-bold indent-20 text-indigo-900"> Add Courses</p>
+            <div class="mt-5">
+                <p class="font-mono  text-xl">Course Name</p>
+                <input type="text" class="foucus:ring-2 ring-2 hover:ring-4 ring-red-500 rounded-lg w-80 h-8">
+            </div>
+            <div class="mt-5">
+
+
+                <p class="font-mono  text-xl">Course Id</p>
+                <input type="text" class="foucus:ring-2 ring-2 hover:ring-4 ring-red-500 rounded-lg w-80 h8">
+            </div>
+            <div class="mt-5">
+                <p class="font-mono  text-xl">Course Type</p>
+                <select class="rounded-lg w-32 w-80 h-8"> 
+                    <option>Hybrid</option>
+                </select>
+            </div>
+            <div class="mt-5">
+                <p class="font-mono  text-xl">Description</p>
+                <textarea placeholder="samll description on the course " class="rounded-lg w-80 h-14"></textarea>
+                <p class="font-mono  text-xl">Prices</p>
+                <select class="rounded-lg w-32 w-80 h-8">
+                    <option>15000</option>
+                </select>
+            </div>
+            <div class=" mt-5 foucus:ring-2 hover:ring-4 border-solid w-20 h-8 text-white bg-blue-950	" >
+                <input type="button" value="Add coures" class="button">
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript objects -introduction</h1>
+    <p>open your browser to see the output
+    </p>
+    <script>
+// object in js example
+
+let person = {
+    name:"IRONMAN",
+    age:25,
+    city:"new york",
+    country:"usa",
+    greet: function(){
+        console.log('Hello,' + this.name);
+    }
+    //     this is the person ,and it will return the object 
+    //     change the value respect to object globaly
+    // }
+
+}
+document.write(person.name);
+document.write("<br>");
+document.write(person.age);
+document.write("<br>");
+console.log(person.age);
+document.write(person.city);
+document.write("<br>");
+console.log(person.city);
+document.write(person.country);
+console.log(person.country);
+person.greet();
+
+
+    </script>
+    
+</body>
+</html>

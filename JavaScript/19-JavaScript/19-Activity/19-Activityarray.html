@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<h3>7.Write a program to copy an element in an array to another element</h3>
+    <br>
+    <script>
+        let a=[1,2,3,4,5];
+        let b=[];
+        document.write("First array :",a,"<br><br>")
+        document.write("Second array :",b,"<br><br>")
+
+        for(i=0;i<a.length;i++){
+            b[i] = a[i]
+        }
+        document.write("after coping Second array :",b,"<br><br>")
+
+    </script>
+<br>
+<h3>8.Program to read an array containing elements 20,25,30,35,40,45,50,55 and divide the array into two arrays
+    containing half elements </h3>
+<br>
+<script>
+    let x = [20, 25, 30, 35, 40, 45, 50, 55];
+    let y = []
+    let z = []
+    let length = a.length
+
+    document.write(x, "<br>")
+
+    for (i = 0; i < (length / 2); i++) {
+        y[i] = x[i]
+    }
+
+    document.write(y, "<br>")
+
+    for (i = (length / 2),j=0; i < length; i++,j++) {
+        z[j] = x[i]
+    }
+
+    document.write(z , "<br>")
+</script>
+<br>
+
+<h3>9.Write a program to concatinate a[2,4,6,8] b=[1,3,5,7] as a single array</h3>
+<br>
+<script>
+    let u = [2, 4, 6, 8]
+    let v = [1, 3, 5, 7]
+    let w = u +","+ v;
+    document.write(w)
+</script>
+
+<h3>10.Write a program to print the minimum & maximum element in array =[8,2,6,7,3,1]</h3>
+<br>
+<script>
+    let array = [8, 2, 6, 7, 3, 1];
+    let min = array[0];
+    let max = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        } else if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    document.write("Min : ",min,"<br>")
+    document.write("Max : ",max)
+</script>
+
+
+<h3>11.Write a program to search an element in an array</h3>
+    <br>
+    <script>
+        let g = [1, 2, 3, 4]
+        let f = 4;
+        let count = 0;
+        let position
+        document.write(g)
+        document.write("<br>find number : ",f)
+        for (i = 0; i < g.length; i++) {
+            if (f == g[i]) {
+                count = 1;
+                position = i;
+                break;
+            }
+        }
+        if (count == 1) {
+            document.write("<br> find the numer in ",i+1," position in the array")
+        }
+        else {
+            document.write("<br> cannot find")
+        }
+    </script>
+
+
+<h3>Write a program to read array=[1,6,7,8,2,3,4,2,9,2,2]. Find the occurance of 2 in this array</h3>
+<br>
+<script>
+    let l = [1,6,7,8,2,3,4,2,9,2,2]
+    let m = 2;
+    let counter = 0;
+    document.write(l)
+    
+    for (i = 0; i < l.length; i++) {
+        if (m == l[i]) {
+            counter = 1 + counter;
+        }
+    }
+        document.write("<br> Count of 2 in this array is : ",counter)
+
+</script>
+
+</body>
+</html>

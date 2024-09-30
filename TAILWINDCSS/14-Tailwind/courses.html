@@ -5,78 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- <link rel="stylesheet" href="/CSS/css/KBA COURSES/style/index.css"> -->
 </head>
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="/CSS/css/KBA COURSES/img/images.png" alt="">
-        </div>
-        <div class="nav">
+<body class="bg-[#f3e8ff] min-h-screen">
+
+    <!-- Navbar -->
+    <header class="bg-[#f3e8ff] py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <img src="/CSS/KBAcourse/logokba.jpeg" alt="Logo" class="h-12">
+            </div>
             <nav>
-                <ul>
-                    <li><a href="/CSS/css/KBA COURSES/index.html">HOME</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/courses.html">COURSES</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/contactus.html">CONTACT US</a></li>
-                    <li><a href="/CSS/css/KBA COURSES/add_course.html">ADD COURSES</a></li>
-                    <li><a href="#">LOGOUT</a></li>
+                <ul class="flex space-x-8 text-purple-800 font-semibold">
+                    <li><a href="/CSS/css/KBA COURSES/index.html" class="hover:text-purple-600">HOME</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/courses.html" class="hover:text-purple-600">COURSES</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/contactus.html" class="hover:text-purple-600">CONTACT US</a></li>
+                    <li><a href="/CSS/css/KBA COURSES/add_course.html" class="hover:text-purple-600">ADD COURSES</a></li>
+                    <li><a href="#" class="hover:text-purple-600">LOGOUT</a></li>
                 </ul>
             </nav>
         </div>
-    </div>
+    </header>
 
-    <!------------------------ navbar ---------------------->
+    <!-- All Courses Section -->
+    <section class="py-12">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-bold text-gray-800 mb-8">All Courses</h3>
 
-
-    <div class="section2">
-        <div class="course-heading">
-            <h3>
-                ALL COURSES
-            </h3>
-        </div>
-
-        <div class="course-row">
-            <div class="course-grid">
-                <div class="courses">
-                    <div class="sub-heading">
-                        <h3>CED</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-purple-100 p-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform">
+                    <div class="mb-4">
+                        <h3 class="text-2xl font-semibold text-purple-800">CED</h3>
                     </div>
-                    <div class="course-img">
-                        <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="">
-                    </div>
-                </div>
-                <div class="detail">
-                    <a href="">MORE</a>
-                </div>
-                <div class="btn">
-                    <input type="button" value="LEARN MORE">
-                </div>
-            </div>
-
-            <div class="course-grid">
-                <div class="courses">
-                    <div class="sub-heading">
-                        <h3>DER</h3>
-                    </div>
-                    <div class="course-img">
-                        <img src="/CSS/css/KBA COURSES/img/BFP1.png" alt="">
-                    </div>
-                </div>
-                <div class="detail">
-                    <a href="">MORE</a>
-                </div>
-                <div class="btn">
-                    <input type="button" value="LEARN MORE">
-                </div>
-            </div>       
-        </div>
-
-        <!-- <div class="center-btn">
-                <input type="button" value="View all Courses">
-        </div> -->
-
-    </div>
-    
-</body>
-</html>
+                    <div class="mb-4">
+                        <img src="/CSS/css/KBA COUR

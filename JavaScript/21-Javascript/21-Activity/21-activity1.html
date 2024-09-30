@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1 .check two matrix same or not </h3>
+    <script>
+        function areMatricesSame(matrix1, matrix2) {  
+   // Check if both matrices have the same number of rows  
+   if (matrix1.length !== matrix2.length) {  
+      return false;  
+   }  
+  
+   // Check if both matrices have the same number of columns  
+   if (matrix1[0].length !== matrix2[0].length) {  
+      return false;  
+   }  
+  
+   // Iterate over each element of the matrices  
+   for (let i = 0; i < matrix1.length; i++) {  
+      for (let j = 0; j < matrix1[0].length; j++) {  
+        // If any element is different, return false  
+        if (matrix1[i][j] !== matrix2[i][j]) {  
+           return false;  
+        }  
+      }  
+   }  
+  
+   // If all elements are the same, return true  
+   return true;  
+}  
+  
+// Example usage:  
+let matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];  
+let matrix2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];  
+let matrix3 = [[1, 2, 3], [4, 5, 6], [7, 8, 10]];  
+  
+let result1 = areMatricesSame(matrix1, matrix2);  
+let result2 = areMatricesSame(matrix1, matrix3);
+document.write("matrix1=[[1, 2, 3], [4, 5, 6], [7, 8, 9]] <br>");
+document.write("matrix2=[[1, 2, 3], [4, 5, 6], [7, 8, 9]]  <br>");
+document.write("matrix3=[[1, 2, 3], [4, 5, 6], [7, 8, 10]] <br><br>");
+
+
+  
+document.write("Are matrix1 and matrix2 the same? " + result1 + "<br><br>");  
+document.write("Are matrix1 and matrix3 the same? " + result2 + "<br>");
+    </script>
+    
+</body>
+</html>

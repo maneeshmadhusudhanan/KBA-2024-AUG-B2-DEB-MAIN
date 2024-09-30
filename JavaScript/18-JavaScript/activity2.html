@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // Part 2: Create an unordered list of cinemas
+
+        // Create an array of cinema names
+        const cinemas = ['Cinema One', 'Grand Cinemas', 'PVR Cinemas', 'INOX', 'Cinepolis'];
+
+        // Create an unordered list element
+        const ul = document.createElement('ul');
+
+        // Loop through the cinemas array and create list items
+        cinemas.forEach(function(cinema) {
+            const li = document.createElement('li');
+            li.textContent = cinema;  // Add cinema name to the list item
+
+            // Append each list item to the unordered list
+            ul.appendChild(li);
+        });
+
+        // Append the unordered list to the 'cinema-list' div
+        document.getElementById('cinema-list').appendChild(ul);
+
+    </script>
+    
+</body>
+</html>

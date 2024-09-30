@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = ["IRONMAN", "SUPERMAN", "BATMAN", "ANTMAN", "SPIDERMAN", "XMAN"];
+
+        document.write(array, "<br>");document.write("<br><br>")
+        
+        document.write("1.  From the list find the position of your favourite film<br>");
+      
+        document.write("position of BATMAN:", array.indexOf("BATMAN"));
+        document.write("<br><br>")
+
+        document.write("2.  Add one more film to the list<br>");
+        array.push("WONDER WOMEN");
+        document.write(array);
+        document.write("<br><br>")
+
+        document.write("3. Pop one film from the list<br>");
+        array.pop();
+        document.write(array);
+        document.write("<br><br>")
+
+        document.write("4.  delete a least interested film from the list<br>");
+        array.splice(4, 1);
+        document.write(array);
+        document.write("<br><br>")
+
+        document.write("5. Make a different list from 3rd position to 6th position<br>");
+        let array1 = array.slice(2, 5);
+        document.write(array1);
+        document.write("<br><br>");
+
+        document.write("6. Search whether BATMAN is on your list <br>");
+        let y = document.write(array.includes("BATMAN"));
+    </script>
+        
+        <h3>1.print pattern <br><br> 1<br>22<br>333<br>4444</h3>
+        <script>
+            for (let i = 1; i <= 4; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(i, " ")
+                }
+                document.write("<br>")
+            }
+        </script>
+        <br>
+        <h3>2.print pattern <br><br> 1<br>23<br>456<br>78910</h3>
+        <script>
+            let x = 1;
+            for (let i = 1; i <= 4; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.write(x, " "),
+                        x = x + 1
+                }
+                document.write("<br>")
+            }
+        </script>
+    
+        <br>
+    
+        <h3>3.print pattern <br><br> 246<br>81012<br>141618<br></h3>
+        <script>
+            {
+                let x = 2;
+                for (let i = 1; i <= 3; i++) {
+                    for (let j = 1; j <= 3; j++) {
+                        document.write(x, " "),
+                            x = x + 2
+                    }
+                    document.write("<br>")
+                }
+            } 
+        </script>
+    
+        <br>
+    
+        <h3>4.print pattern <br><br>***<br>**<br>*<br></h3>
+        <br>
+        <script>
+            for (let i = 3; i > 0; i--) {
+                for (let j = 1; j <= i; j++) {
+                    document.write("* ")
+                }
+                document.write("<br>")
+            }
+    
+        </script>
+    
+        <br>
+    
+        <h3>5. print pattern <br><br> 246<br>810<br>12<br></h3>
+        <br>
+        <script>
+            {
+                let x = 2;
+                for (let i = 3; i > 0; i--) {
+                    for (let j = 1; j <= i; j++) {
+                        document.write(x, " "),
+                            x = x + 2
+                    }
+                    document.write("<br>")
+                }
+    
+            }
+    
+        </script>
+
+    
+    
+</body>
+</html>
