@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Define an arrow function greetLater that takes a parameter name 
+// and logs "Hello, [name]" after 2 seconds using setTimeout.
+const greetLater = (name) => {
+  setTimeout(() => {
+    console.log(`Hello, ${name}`);
+  }, 2000);
+};
+
+// Call the function
+greetLater("MANEESH MADHUSUDHANAN");
+
+// Explanation:
+// In an arrow function, the 'this' context is inherited from the 
+// surrounding scope, also known as lexical scoping. This means 
+// that 'this' behaves the same way as in the surrounding code.
+// In this case, 'this' is not used within the arrow function,
+// so it's not necessary to bind it.
+
+
+    </script>
+
+</body>
+</html>

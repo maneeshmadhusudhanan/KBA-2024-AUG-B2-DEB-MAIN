@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example and expanation of this context behavior in arrow funtion</title>
+</head>
+<body>
+    <h1>example without arrow funtion</h1>
+    <script>
+//         Here's an example of a scenario where using arrow functions is beneficial due to their this context behavior:
+// Suppose you have a class Person with a method sayHello that logs a greeting message to the console. You also have a setTimeout function that calls sayHello after a delay of 2 seconds.
+
+class Person {  
+  constructor(name) {  
+   this.name = name;  
+  }  
+  
+  sayHello() {  
+   console.log(`Hello, my name is ${this.name}`);  
+  }  
+}  
+  
+const person = new Person('John');  
+  
+setTimeout(person.sayHello, 2000); // logs "Hello, my name is undefined"
+
+// In this example, when setTimeout calls person.sayHello, the this context is lost, and this.name is undefined. This is because setTimeout calls the function in the global context, not in the context of the Person object.
+
+
+// To fix this issue, you could use bind to bind the sayHello method to the Person object:
+setTimeout(person.sayHello.bind(person), 2000); // logs "Hello, my name is John"
+    </script>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+<h1>example with arrow funtion</h1>
+    <script>
+// However, using an arrow function provides a more concise and elegant solution:
+class Persons {  
+  constructor(name) {  
+   this.name = name;  
+  }  
+  
+  sayHello = () => {  
+   console.log(`Hello, my name is ${this.name}`);  
+  }  
+}  
+  
+const persons = new Persons('sumesh');  
+  
+setTimeout(persons.sayHello, 2000); // logs "Hello, my name is John"
+
+// In this example, the sayHello method is defined as an arrow function, which inherits the this context from the surrounding scope (the Person object). When setTimeout calls person.sayHello, the this context is preserved, and this.name is correctly logged to the console.
+
+// Using an arrow function in this scenario provides several benefits:
+
+//      It eliminates the need to use bind to bind the method to the object.
+//      It makes the code more concise and easier to read.
+//      It ensures that the this context is preserved, even when the method is called in a different context.
+
+// In contrast, using a traditional function declaration would require using bind to bind the method to the object, which can make the code more verbose and harder to read.
+
+// Overall, arrow functions provide a convenient and elegant way to handle this context issues in JavaScript, making them a valuable tool in a developer's toolkit.
+
+    </script>
+</body>
+</html>
