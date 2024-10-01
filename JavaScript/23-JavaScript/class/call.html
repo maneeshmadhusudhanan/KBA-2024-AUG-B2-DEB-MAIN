@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call method to control 'this' keyword</title>
+</head>
+<body>
+    <h1>call method in funtions</h1>
+    <p>check the console for output</p>
+    <script>
+//  function greet(greeting){
+//     console.log(greeting + ',' + this.name);
+
+//  }
+//  let person = {
+//     name :'IRONMAN',
+//     age:25
+//  }
+
+//  greet.call(person,'hello');
+
+ const person = {
+    fullName: function(city , country ){
+        console.log(this.firstname + " "+this.lastname+","+city+" ,"+country);
+
+    }
+ }
+//  const person1 = {
+//     firstname: "IRON",
+//     lastname:"MAN"
+//  };
+//  person.fullName.call(person1,"New York","USA");
+
+
+
+
+const person1 = {
+    firstname: "SPIDER",
+    lastname:"MAN"
+ };
+ const person2 = {
+    firstname: "IRON",
+    lastname:"MAN"
+ }
+ const person3 = {
+    firstname: "SUPER",
+    lastname:"MAN"
+ }
+ const boundFuntion = person.fullName.bind(person3,"KIGSTON","JAMAICA");
+ 
+ person.fullName.apply(person1,["LONDON","UK"]);
+ person.fullName.call(person2,"NEW YORK","USA");
+ boundFuntion();
+ 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a=[[2,4,6],[4,8,6],[4,8,6]]
+        let b=[[2,4,8],[4,8,6],[4,8,6]]
+
+        let c=0
+        for(let i=0;i<a.length;i++){
+            for(let j=0;j<b.length;j++){
+                if(a[i][j]!=b[i][j]){
+                    c=1;
+                    break;
+
+            }
+            
+        }
+        }
+
+        if (c==1){
+            document.write("arrays are different")
+
+        }else{
+    document.write("arrays are same");
+}
+
+    </script>
+</body>
+</html>

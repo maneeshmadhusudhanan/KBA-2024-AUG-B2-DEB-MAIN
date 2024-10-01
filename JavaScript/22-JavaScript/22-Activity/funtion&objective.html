@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercise 1</h1>
+    <p>Define a function calculate Area that takes two parameters length and width and returns the area of a rectangle. Then, define a function calculatePerimeter that takes the same parameters and returns the perimeter of the rectangle. Use both functions to log the area and perimeter of a rectangle with length 5 and width 10.</p>
+    <script>
+        // Function to calculate the area of a rectangle
+function calculateArea(length, width) {
+    return length * width;
+}
+
+// Function to calculate the perimeter of a rectangle
+function calculatePerimeter(length, width) {
+    return 2 * (length + width);
+}
+
+// Example usage
+const length = 5;
+const width = 10;
+
+const area = calculateArea(length, width);
+const perimeter = calculatePerimeter(length, width);
+
+console.log(`The area of the rectangle is: ${area}`);        // Output: 50
+console.log(`The perimeter of the rectangle is: ${perimeter}`);  // Output: 30
+document.write(`The area of the rectangle is: ${area},<br>`);        // Output: 50
+document.write(`The perimeter of the rectangle is: ${perimeter}`);  // Output: 30
+    </script>
+<h1>Exercise 2</h1>
+<p>Create an object car with properties make, model, and year. Add a method getCarAge that calculates the car's age based on the current year and logs "This car is [age] years old". Assume the current year is 2024 and call the method to display the car's age.</p>
+    <script>
+// Create the car object with properties and a method  
+const car = {  
+   make: "Toyota",  
+   model: "Corolla",  
+   year: 2015,  
+  
+   // Method to calculate the car's age and log the result  
+   getCarAge: function() {  
+      const currentYear = 2024;  
+      const age = currentYear - this.year;  
+      console.log(`This car is ${age} years old.`); 
+      document.write(`This car is ${age} years old.`); 
+   }  
+};  
+  
+// Call the method to display the car's age  
+car.getCarAge(); 
+    </script>
+    <h1>Exercise 3</h1>
+    <p>Write an arrow function findLargest that takes three numbers as parameters and returns the largest of the three. Use the function to find the largest number among 3, 15, and 9, and log the result.</p>
+<script>
+    // Define the arrow function findLargest  
+const findLargest = (num1, num2, num3) => {  
+   return Math.max(num1, num2, num3);  
+};  
+  
+// Call the function with the numbers 3, 15, and 9  
+const largest = findLargest(3, 15, 9);  
+  
+// Log the result  
+console.log(largest); // Output: 15
+document.write(" LARGEST NUMBER= ",largest);
+
+</script> 
+<h1>Exercise 4</h1>
+<P>Define a function userInfo that accepts a username as a parameter and logs "Welcome, [username]". Inside this function, define and immediately invoke another function named displayMessage that logs "User [username] has logged in". Ensure that both functions have access to the username variable.</P>
+<script>
+    // Define the userInfo function  
+function userInfo(username) {  
+  // Define and immediately invoke the displayMessage function  
+  (function displayMessage() {  
+      console.log(`User ${username} has logged in`);  
+  })();  
+  
+  // Log the welcome message  
+ console.log(`Welcome, ${username}`);  
+}  
+  
+// Call the userInfo function with a username  
+userInfo("JohnDoe");
+
+</script>
+</body>
+</html>
