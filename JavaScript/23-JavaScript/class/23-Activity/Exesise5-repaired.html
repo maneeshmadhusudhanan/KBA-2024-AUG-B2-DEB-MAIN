@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List</title>
+  </head>
+  <body>
+    <h1>Task List</h1>
+    <input type="text" id="new-task" placeholder="Enter new task" />
+    <button id="add-task">Add Task</button>
+    <ul id="task-list"></ul>
+
+    <script>
+      // Retrieve tasks from localStorage or initialize an empty array
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+      // Function to add task
+      function addTask(taskText) {
+        tasks.push({ text: taskText, edited: false });
+        saveTasks();
+        displayTasks();
+      } // Function to edit task
+
+      function editTask(index) {
+        tasks[index].edited = true;
+        saveTasks();
+        displayTasks();
+      } // Function to save edited task
+
+      function saveTask(index, newTaskText) {
+        tasks[index].text = newTaskText;
+        tasks[index].edited = false;
+        saveTasks();
+        displayTasks();
+      } // Function to remove task
+
+      function removeTask(index) {
+        tasks.splice(index, 1);
+        saveTasks();
+        displayTasks();
+      } // Function to display tasks
+
+      function displayTasks() {
+        const taskList = document.getElementById("task-list");
+        taskList.innerHTML = "";
+        tasks.forEach((task, index) => {
+          const taskHTML = `  
+  <li class="task">  
+ ${
+   task.edited
+     ? `<input type="text" value="${task.text}" />`
+     : `<span>${task.text}</span>`}  ${task.edited
+     ? `<button class="save-btn" onclick="saveTask(${index}, this.parentNode.querySelector('input').value)">Save</button>`
+     : `<button class="edit-btn" onclick="editTask(${index})">Edit</button>`
+ }  
+  <button class="remove-btn" onclick="removeTask(${index})">Remove</button>  
+   </li> `;
+          taskList.innerHTML += taskHTML;
+        });
+      } // Function to save tasks to localStorage
+
+      function saveTasks() {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+      } // Add event listener to add task button
+
+      document.getElementById("add-task").addEventListener("click", () => {
+        const newTaskInput = document.getElementById("new-task");
+        addTask(newTaskInput.value.trim());
+        newTaskInput.value = "";
+      }); // Display tasks on page load
+
+      displayTasks();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Higher order funtions</h1>
+    <p>check the console for output</p>
+    <script>
+        let numbers = [1,2,3,4,5];
+
+        let doubled = numbers.map(n=>n*2);
+        // n*2  it execute as a loop-the value stored in the map array is stored in the double and we show the output to consol  
+
+        console.log(doubled);
+
+
+
+
+        //  The next higher order funtion is the filter .console
+
+         let even = numbers.filter(n => n%2===0);
+         console.log('Even numbers:',even);
+
+        //  The next higher order funtion is the reduce .console
+
+         let sum = numbers.reduce((total,n)=> total+n,0);
+         console.log('Adding the sum of the array :',sum);
+
+
+        //  dinamic intialization of array
+
+        let array = new Array(5).fill(0);
+        console.log("Initialized Array: ",array);
+        for (let i=0;i<array.lengtgh;i++){
+            array[i]=i+1;
+        }
+        console.log('Filled array:',array);
+
+        // double the array using map
+        let arraydoubled = array.map(n => n*2);
+        console.log('Doubled array:',arraydoubled);
+        
+
+
+
+
+    </script>
+</body>
+</html>

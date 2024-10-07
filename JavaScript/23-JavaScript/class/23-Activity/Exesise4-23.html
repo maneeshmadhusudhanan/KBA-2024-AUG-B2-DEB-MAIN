@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <h1>TASK MANAGER</h1>
+<input type="text" id="new-task" placeholder="Enter a new task">
+<button id="add-task">Add Task</button>
+<ul id="task-list"></ul>
+
+
+
+    <script>
+
+
+const taskList = document.getElementById('task-list');
+const newTaskInput = document.getElementById('new-task');
+const addTaskButton = document.getElementById('add-task');
+
+// Add task event listener
+addTaskButton.addEventListener('click', addTask);
+
+// Function to add task
+function addTask() {
+  const taskText = newTaskInput.value.trim();
+  if (taskText) {
+    const taskHTML = `
+      <li class="task">
+        <span>${taskText}</span>
+        <button class="edit-btn">Edit</button>
+        <button class="remove-btn">Remove</button>
+      </li>
+    `;
+    taskList.innerHTML += taskHTML;
+    newTaskInput.value = '';
+    const editButtons = document.querySelectorAll('.edit-btn');
+    const removeButtons = document.querySelectorAll('.remove-btn');
+    editButtons.forEach((btn) => btn.addEventListener('click', editTask));
+    removeButtons.forEach((btn) => btn.addEventListener('click', removeTask));
+  }
+}
+
+// Function to edit task
+function editTask(event) {
+  const task = event.target.parentNode;
+  const taskText = task.querySelector('span').textContent;
+  const inputHTML = `
+    <input type="text" value="${taskText}" />
+    <button class="save-btn">Save</button>
+  `;
+  task.innerHTML = inputHTML;
+  const saveButton = task.querySelector('.save-btn');
+  saveButton.addEventListener('click', saveTask);
+}
+
+// Function to save edited task
+function saveTask(event) {
+  const task = event.target.parentNode;
+  const input = task.querySelector('input');
+  const newTaskText = input.value.trim();
+  task.innerHTML = `
+    <span>${newTaskText}</span>
+    <button class="edit-btn">Edit</button>
+    <button class="remove-btn">Remove</button>
+  `;
+  const editButtons = document.querySelectorAll('.edit-btn');
+  const removeButtons = document.querySelectorAll('.remove-btn');
+  editButtons.forEach((btn) => btn.addEventListener('click', editTask));
+  removeButtons.forEach((btn) => btn.addEventListener('click', removeTask));
+}
+
+// Function to remove task
+function removeTask(event) {
+  const task = event.target.parentNode;
+  task.remove();
+}
+
+    </script>
+</body>
+</html>

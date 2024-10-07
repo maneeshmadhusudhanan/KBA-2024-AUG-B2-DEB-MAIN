@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exesise2</title>
+    
 </head>
-<body>
+<body><h1>Exercise 2 . 
+    Using the new keyword, create an object constructor Book that contains properties such as title, author, and year.
+     Add a method getDetails that logs the book's details in the format "Title: [title], Author: [author], Year: [year]".
+      Instantiate two books and log their details using the getDetails method.</h1>
     <script>
-        
+        // Object constructor Book
+function Book(title, author, year) {
+  this.title = title;
+  this.author = author;
+  this.year = year;
+
+  // Method to log book details
+  this.getDetails = function() {
+    console.log(`Title: ${this.title}, Author: ${this.author}, Year: ${this.year}`);
+  };
+}
+
+// Instantiate two books
+const book1 = new Book("To Kill a Mockingbird", "Harper Lee", 1960);
+const book2 = new Book("1984", "George Orwell", 1949);
+
+// Log book details
+book1.getDetails();
+book2.getDetails();
+
     </script>
 </body>
 </html>

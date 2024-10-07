@@ -6,10 +6,187 @@
     <title>Document</title>
 </head>
 <body>
+    <h3>1. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.</h3>
+
     
     <script>
+        // Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+        a=22
+        if(a>0){
+            if((a%3 || a%7)==0){
+                document.write("no is multiple of 3 or 7")
+            }
+            else{
+                document.write("no is not multiple of 3 or 7")
+            }
+        }
+    </script>
+    <h3>2. Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified sign.</h3>
+    <script>
+                //Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified sign.
+        document.write("2)Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified sign.<br><br>")
+                let n1 = 8; 
+                let n2 = -11; 
+                let n3 =22;  
+                let p = n1 * n2 * n3
+                if (p > 0) {
+                    document.write("The sign of the product is +<br>");
+                } else if (p < 0) {
+                    document.write("The sign of the product is: -<br>");
+                } else {
+                    document.write("The product is zero (0).<br>");
+                }
 
-        
+        // Write a program using switch case to check the CGPA on given condition.
+        // If the CGPA is 8 then print You got 8 CGPA.
+        // If the CGPA is 10 then print You got 10 CGPA.
+        // If the CGPA is 7 then print You got 7 CGPA.
+        document.write("3)Write a program using switch case to check the CGPA on given condition.<br><br>")
+        let N=10
+        switch(N)
+        {
+
+            case 10:
+                {
+                    document.write(" 10 CGPA.<br>")
+                    break;
+                }
+                case 8:
+                {
+                    document.write(" 8 CGPA.<br>")
+                    break;
+                }
+                case 7:
+                {
+                    document.write(" 7 CGPA.<br>")
+                    break;
+                }
+                default:{
+                        document.write("Invalid number<br>")
+                    }
+        }
+        document.write("<br>")
+        // Write a program to print the month name by given number using switch
+        document.write("4) Write a program to print the month name by given number using switch<br><br>")
+        let month=12
+        switch(month)
+        {
+            case 1:
+                {
+                    document.write(" January.<br>")
+                    break;
+                }
+                case 2:
+                {
+                    document.write(" February.<br>")
+                    break;
+                }
+                case 3:
+                {
+                    document.write(" March.<br>")
+                    break;
+                }
+                case 4:
+                {
+                    document.write(" April.<br>")
+                    break;
+                }
+                case 5:
+                {
+                    document.write(" May.<br>")
+                    break;
+                }
+                case 6:
+                {
+                    document.write(" June.<br>")
+                    break;
+                }
+                case 7:
+                {
+                    document.write(" july.<br>")
+                    break;
+                }
+                case 8:
+                {
+                    document.write(" August.<br>")
+                    break;
+                }
+                case 9:
+                {
+                    document.write(" september.<br>")
+                    break;
+                }
+                case 10:
+                {
+                    document.write(" October.<br>")
+                    break;
+                }
+                case 11:
+                {
+                    document.write(" November.<br>")
+                    break;
+                }
+                case 12:
+                {
+                    document.write(" December.<br>")
+                    break;
+                }
+                default:{
+                        document.write("invalid number<br>")
+                    }
+        }
+        document.write("<br><br>")
+        // Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
+        // Temp < 0 then Freezing weather
+        // Temp 0-10 then Very Cold weather
+        // Temp 10-20 then Cold weather
+        // Temp 20-30 then Normal in Temp
+        // Temp 30-40 then Its Hot
+        // Temp >=40 then Its Very Hot
+        document.write("6) Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:<br><br>")
+        let t = 38; 
+        if (t < 0) {
+            document.write("Freezing weather");
+        } else if (t >= 0 && t < 10) {
+            document.write("Very Cold weather");
+        } else if (t >= 10 && t< 20) {
+            document.write("Cold weather");
+        } else if (t >= 20 && t < 30) {
+            document.write("Normal Temp");
+        } else if (t >= 30 && t < 40) {
+            document.write("It's Hot");
+        } else {
+            document.write("It's Very Hot");
+        }
+    </script>
+     <h3>3. Write a program to calculate the root of a quadratic equation.</h3>
+     <br>
+     <script>
+         let a = 2; b = 6; c = 2;
+ 
+         document.write("The quadractic equation is:", a, "x<sup>2</sup>+ ", b, "x + ", c)
+ 
+         let desc = (b * b) - (4 * a * c)
+         document.write("<br><br> Discriminent :", desc)
+ 
+ 
+         if (desc > 0) {
+             let r1 = (- b) + (Math.sqrt(desc)) / (2 * a);
+             let r2 = (- b) - (Math.sqrt(desc)) / (2 * a);
+             document.write("<br> The Real Roots are : <br> Root1 : ", r1, "<br>Root2 : ", r2)
+         } else if (desc == 0) {
+             let r1 = (-b) / (2 * a);
+           
+             document.write("<br> Roots are equal.<br> Root1 : ",r1)
+         }else{
+             document.write("<br> Roots are imaginary  ")
+         }
+ 
+ 
+     </script>
+
+</body>
+</html>
     </script>
 </body>
 </html>

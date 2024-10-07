@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library View</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 100;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 153, 51, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 20px 20px rgba(255, 153, 51, 0);
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .hover\:animate-pulse:hover {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-400 flex flex-col items-center justify-center min-h-screen">
+    <!-- Navbar -->
+    <nav class="w-full bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 shadow-2xl rounded-b-xl py-4 mb-12 fade-in transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-inner hover:bg-gradient-to-r hover:from-orange-300 hover:to-orange-500 border-b-4 border-gray-200 hover:border-orange-400">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <img src="/LibrayApp/Libimages/logolib.png" alt="Library Logo" class="w-24 h-24 transform transition duration-500 hover:scale-110 hover:rotate-6 hover:shadow-xl hover:border-2 border-orange-400 rounded-full">
+            <ul class="flex space-x-8 text-gray-800 font-bold text-lg">
+                <li><a href="/LibrayApp/home2.html" class="hover:text-orange-400 hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-100 hover:px-4 py-2 rounded-md">HOME</a></li>
+                <li><a href="/LibrayApp/addbook2.html" class="hover:text-orange-400 hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-100 hover:px-4 py-2 rounded-md">ADD BOOK</a></li>
+                <li><a href="/LibrayApp/signup3.html" class="hover:text-orange-400 hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-100 hover:px-4 py-2 rounded-md">SIGN UP</a></li>
+                <li><a href="/LibrayApp/login3.html" class="hover:text-orange-400 hover:scale-110 transition duration-300 ease-in-out transform hover:shadow-lg hover:bg-gray-100 hover:px-4 py-2 rounded-md">LOGIN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="screen bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 shadow-xl rounded-xl p-12 fade-in w-4/5 lg:w-1/2 transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-r hover:from-orange-300 hover:to-orange-500">
+        <div class="text-center">
+            <h1 class="text-5xl font-extrabold text-orange-400 mb-6 animate-bounce hover:text-orange-500 transition duration-300">View Books</h1>
+        </div>
+        
+        <div class="maindiv">
+            <h2 class="text-4xl text-center font-bold text-white mb-8">Drama</h2>
+            <div class="row grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="subdiv bg-white p-4 rounded-xl shadow-lg transform transition duration-500 hover:scale-110 hover:bg-orange-100">
+                    <img src="/LibrayApp/Libimages/book1.jpg" alt="" class="w-52 mx-auto mb-10">
+                    <h4 class="text-lg font-bold">The Importance of Being Earnest</h4>
+                    <p><b>Author</b>: Oscar Wilde</p>
+                </div>
+                <div class="subdiv bg-white p-4 rounded-xl shadow-lg transform transition duration-500 hover:scale-110 hover:bg-orange-100">
+                    <img src="https://m.media-amazon.com/images/I/91dDv9WOcFL._SY342_.jpg" alt="" class="w-52 mx-auto mb-4">
+                    <h4 class="text-lg font-bold">House of The Dragon</h4>
+                    <p><b>Author</b>: Gina Mcintyre</p>
+                </div>
+                <div class="subdiv bg-white p-4 rounded-xl shadow-lg transform transition duration-500 hover:scale-110 hover:bg-orange-100">
+                    <img src="/LibrayApp/Libimages/book2.jpg" alt="" class="w-52 mx-auto mb-4">
+                    <h4 class="text-lg font-bold">Macbeth</h4>
+                    <p><b>Author</b>: William Shakespeare</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="maindiv mt-12">
+            <h2 class="text-4xl text-center font-bold text-white mb-8">Thriller</h2>
+            <div class="row grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="subdiv bg-white p-4 rounded-xl shadow-lg transform transition duration-500 hover:scale-110 hover:bg-orange-100">
+                    <img src="/LibrayApp/Libimages/book3.jpg" alt="" class="w-52 mx-auto mb-4">
+                    <h4 class="text-lg font-bold">The Silent Patient</h4>
+                    <p><b>Author</b>: Alex Michaelides</p>
+                </div>
+                <div class="subdiv bg-white p-4 rounded-xl shadow-lg transform transition duration-500 hover:scale-110 hover:bg-orange-100">
+                    <img src="/LibrayApp/Libimages/book5.jpg" alt="" class="w-52 mx-auto mb-4">
+                    <h4 class="text-lg font-bold">The Housemaid</h4>
+                    <p><b>Author</b>: Mark Salber Phillips</p>
+                </div>
+                <div class="subdiv bg-white p-4 rounded-xl shadow-lg transform transition duration-500 hover:scale-110 hover:bg-orange-100">
+                    <img src="/LibrayApp/Libimages/book6.jpg" alt="" class="w-52 mx-auto mb-4">
+                    <h4 class="text-lg font-bold">Verity</h4>
+                    <p><b>Author</b>: Colleen Hoover</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white py-6 mt-12 shadow-lg fade-in">
+        <div class="container mx-auto text-center text-gray-600">
+            <p>&copy; 2024 LibraryApp. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

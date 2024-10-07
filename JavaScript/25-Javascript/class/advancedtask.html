@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Task Manager with priorities</title>
+
+
+
+    <style>
+     ul {list-style-type: none;}
+    li{margin:5px 0;}
+    .completed {text-decoration: line-through; color: gray}
+    .priority-high {color:red;}
+    .priority-medium {color:yellow;}
+    .priority-low {color:green;}
+    
+    </style>
+</head>
+<body>
+   <h1>Advance Task Manager with priorities</h1>
+   <label for="task">Enter a Task:</label>
+   <input type="text" id="task"><br>
+   <button onclick="addTask">ADD TASK</button>
+   <ul id="taskList"></ul>
+
+<script src="task.js"></script>
+</body>
+</html>

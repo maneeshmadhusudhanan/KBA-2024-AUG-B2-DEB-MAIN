@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#movie-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#movie-list li {
+    margin-bottom: 10px;
+}
+
+.priority-high {
+    color: red;
+}
+
+.priority-medium {
+    background:yellow;
+    color: yellow;
+}
+
+.priority-low {
+    color: green;
+}
+
+.watched {
+    text-decoration: line-through;
+    color: gray;
+}

@@ -1,0 +1,48 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/Css/LibrayApp/Libimages/Hp!.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+.screen{
+    box-shadow: 10px 10px 5px #27211d;;
+    text-align: justify;
+    width: 500px;
+    height: 530px;
+    background-color: #c5ae98;
+    border-radius: 30px;
+    margin-left: 800px;
+    margin-top: 80px;
+    padding: 30px;
+    opacity: .9;
+    color:#2c1201;
+    
+
+}
+.econtent h2{
+    font-size: 30px;
+    text-align: center;
+   
+
+}
+.econtent{
+    font-size: 20px ;
+   
+}
+.econtent input{
+    width: 350px;
+    height: 30px;
+    margin-left: 65px;
+}
+.econtent p{
+    font-size: 20px;
+    margin-left: 65px;
+}
+.econtent input{
+    border-radius: 30px;
+}

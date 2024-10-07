@@ -1,0 +1,17 @@
+#grad {
+    background-image: linear-gradient(to right, rgb(219, 99, 137) , rgb(242, 242, 228));
+  }
+    img{width:1%;height: 5%;border-style:solid;border-radius:20px;
+
+  }
+  @media only screen and (max-width:600px){
+
+  }
+
+  img{width:900px;height:900px;border-style:solid;border-radius:20px;
+
+  }
+  .myTable{ border =1 cellpadding="3"
+
+  }
+  

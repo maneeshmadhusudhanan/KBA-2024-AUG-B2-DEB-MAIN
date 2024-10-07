@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Define the person1 object
+const person1 = {
+  firstname: 'John',
+  lastname: 'Doe'
+};
+
+// Define the printFullName function
+function printFullName() {
+  console.log(`Full Name: ${this.firstname} ${this.lastname}`);
+}
+
+// Define person2 and person3 objects
+const person2 = {
+  firstname: 'Jane',
+  lastname: 'Smith'
+};
+
+const person3 = {
+  firstname: 'Bob',
+  lastname: 'Johnson'
+};
+
+// Use call() to invoke printFullName for person2
+printFullName.call(person2); // Output: Full Name: Jane Smith
+
+// Use apply() to invoke printFullName for person3
+printFullName.apply(person3); // Output: Full Name: Bob Johnson
+
+// Use bind() to create a new function bound to person2
+const boundPrintFullName = printFullName.bind(person2);
+boundPrintFullName(); // Output: Full Name: Jane Smith
+
+// Note that the call() and apply() methods invoke the printFullName() function immediately, while the bind() method returns a new function that can be invoked later.
+    </script>
+    
+</body>
+</html>

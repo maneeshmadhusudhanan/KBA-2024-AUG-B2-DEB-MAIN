@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add some basic styling to make it look more like YouTube */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .nav-item {
+            margin-right: 20px;
+        }
+        .nav-item:hover {
+            background-color: #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .video-thumbnail {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .video-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .video-description {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-white py-2">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <img src="logo.png" alt="Logo" class="w-32">
+            <input type="text" placeholder="Search" class="rounded-full border w-64 p-2">
+            <button class="bg-red-500 text-white rounded-full p-2">Search</button>
+        </div>
+    </nav>
+
+    <!-- Video Section -->
+    <div class="video-container mx-auto p-4">
+        <!-- Video 1 -->
+        <div>
+            <img src="video1.jpg" alt="Video 1" class="video-thumbnail">
+            <h2 class="video-title">Video Title 1</h2>
+            <p class="video-description">Video description 1</p>
+        </div>
+        <!-- Video 2 -->
+        <div>
+            <img src="video2.jpg" alt="Video 2" class="video-thumbnail">
+            <h2 class="video-title">Video Title 2</h2>
+            <p class="video-description">Video description 2</p>
+        </div>
+        <!-- Add more videos here -->
+    </div>
+</body>
+</html>
