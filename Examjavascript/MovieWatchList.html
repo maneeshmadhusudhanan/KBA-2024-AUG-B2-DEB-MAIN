@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="Header1">MOVIE WATCH LIST</h1>  
+    <input class="Input1" type="text" id="title" placeholder="ADD MOVIE TITLE">
+    <hr>
+    <br>
+    <h2 class="h2genre">GENRE :-</h2>
+    <div class="div1">
+    <h4 class="h1action">1-Action</h4>
+    <h4 class="h1comedy">2-comedy</h4>
+    <h4 class="h1drama">3-Drama</h4>
+</div>
+
+    <br> 
+    <input class="Input2" type="number" id="genre" placeholder="Genre (1-ACTION, 2-COMEDY, 3-DRAMA)">  
+    <button class="Button1" onclick="addMovie()">ADD MOVIE</button>  
+    <ul class="ULid" id="movieList"></ul>
+    <script>
+
+let movies = [];  
+      let genres = [];  
+  
+      // Function to add a movie  
+      function addMovie() {  
+        const title = document.getElementById('title').value;  
+        const genre = parseInt(document.getElementById('genre').value);  
+        if (title !== '' && genre >= 1 && genre <= 3) {  
+           movies.push(title);  
+           genres.push(genre);  
+           displayMovies();  
+           saveToLocalStorage();  
+        }  
+      } 
+
+      // funtion to save a movie
+
+      function savemovie(){
+         displayMovie();
+        const title = document.getElementById('title').value;
+        const genre = parseInt(document.getElementById('genre').value);
+
+      }
+
+
+      //.........................................
+       
+       // Function to display movies  
+ function displayMovies() {  
+ const movieList = document.getElementById('movieList');  
+ movieList.innerHTML = '';  
+for (let i = 0; i < movies.length; i++) {  
+ const li = document.createElement('li');  
+  li.textContent = movies[i];  
+  switch (genres[i]) {  
+   case 1:  
+ li.classList.add('Action');  
+ break;  
+   case 2:  
+ li.classList.add('Comedy');  
+ break;  
+   case 3:  
+ li.classList.add('Drama');  
+ break;  
+  }  
+ const watchedButton = document.createElement('button');  
+  watchedButton.textContent = 'Mark as Watched';  
+  watchedButton.onclick = function() {  
+   markAsWatched(i);  
+  };  
+  li.appendChild(watchedButton);  
+  const editButton = document.createElement('button');  
+  editButton.textContent = 'Edit';  
+  editButton.onclick = function() {  
+   editMovie(i);  
+ };  
+ li.appendChild(editButton);  
+  const removeButton = document.createElement('button');  
+  removeButton.textContent = 'Remove';  
+  removeButton.onclick = function() {  
+   removeMovie(i);  
+  };  
+  li.appendChild(removeButton);  
+ movieList.appendChild(li);  
+ }  
+  }  
+  
+  // Function to mark a movie as watched  
+   function markAsWatched(index) {  
+ const movieList = document.getElementById('movieList');  
+ const li = movieList.children[index];  
+ li.classList.add('Watched');  
+   }  
+  
+  // Function to edit a movie  
+   function editMovie(index) {  
+ const title = prompt('ENTER NEW MOVIE TITLE:');  
+ if (title !== '') {  
+  movies[index] = title;  
+  displayMovies();  
+  saveToLocalStorage();   
+  }  
+   }  
+
+
+
+// //   // Function to edit a movie
+//    function editMovie(index) {
+//     const title = editMovie('ENTER NEW MOVIE TITLE:');
+//         title[index].edited = true;
+//         saveToLocalStorage();
+//         displayMovies();}
+
+
+
+  // Function to remove a movie  
+  function removeMovie(index) {  
+ movies.splice(index, 1);  
+ genres.splice(index, 1);  
+ displayMovies();  
+ saveToLocalStorage();  
+   }  
+  
+   // Function to save to local storage  
+   function saveToLocalStorage() {  
+ localStorage.setItem('movies', JSON.stringify(movies));  
+ localStorage.setItem('genres', JSON.stringify(genres));  
+   }  
+  
+   // Load from local storage  
+   window.onload = function() {  
+ const storedMovies = localStorage.getItem('movies');  
+ const storedGenres = localStorage.getItem('genres');  
+ if (storedMovies == storedGenres) {  
+  movies = JSON.parse(storedMovies);  
+  genres = JSON.parse(storedGenres);  
+ displayMovies();  
+ }  
+   };  
+ </script> 
+
+      
+      
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+.Header1{
+    text-align: center;
+    background: rgb(236, 161, 62);
+}
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background: rgb(236, 161, 62);
+    gap: 15px;
+
+}
+.Button1{
+    background-color: rgb(245, 142, 7);
+    color: white;
+    padding: 10px 20px;
+    border: 4;
+    border-radius: 5px;
+
+}
+
+    
+    .h1action{
+        font-size: 25px;
+       color: red;
+    
+    }
+    .h1comedy{
+        font-size: 25px;
+       color: rgb(252, 249, 85);
+
+    }
+    .h1drama{
+        font-size: 25px;
+       color: rgb(10, 36, 236);
+
+    }
+    .h2genre{
+        color: rgb(2, 104, 77);
+
+    }
+    .Input1{
+        width: 25%;
+        height: 30px;
+        padding: 10px;
+        font-size: 18px;
+        border: double;
+        border-color: #f9a811;
+        border-radius: 10px;
+
+    }
+    .Input2{
+        width: 25%;
+        height: 30px;
+        padding: 10px;
+        font-size: 18px;
+        border: double;
+        border-color: #f9a811;
+        border-radius: 10px;
+
+    }
+    .Action {
+        background-color: rgb(117, 16, 2);
+        color: red;  
+      }  
+      .Comedy {  
+        background-color: #a76e04;
+        color: rgb(212, 212, 2);  
+      }  
+      .Drama { 
+        background-color: rgb(17, 124, 231);
+        color: rgb(3, 3, 140);  
+      }
+
+    .Watched {
+        row-gap: 30px;
+        background-color: gray;
+        color: rgb(24, 23, 23);
+        border: 4;
+        border-color: #f9a811;
+        padding: 10px;
+        font-size: 18px;
+        row-gap: 60px;
+
+      }
+      .ULid{
+        list-style:decimal;
+        gap: 60%;; 
+        text-align: center;
+        padding: 50px;
+       
+
+      }
+     
