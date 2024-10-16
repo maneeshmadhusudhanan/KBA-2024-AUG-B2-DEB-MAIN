@@ -1,0 +1,86 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/Css/LibrayApp/Libimages/Hp!.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+}
+nav{
+    width:auto;
+    height: 100px;
+    /* box-shadow: 10px 10px  #5f6857;*/
+    background-color:#27211d;
+    opacity: .7;
+    border-radius: 10px;
+    
+    
+}
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin-top: 40px;
+
+
+
+
+    
+ }
+.nav ul li{
+    font-size: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+}
+.nav ul li a:hover{
+
+    text-decoration: none;
+    font-size: 25px;
+    color:#d16264;
+
+}
+.subdiv{
+    text-align: center;
+}
+.maindiv{
+    margin-top: 20px;
+    background-color:#27211d8c;
+    padding: 10px;
+    
+}
+.maindiv .subdiv{
+    margin-right: 300px;
+}
+
+.maindiv .subdiv img{
+    width: 200px;
+    height: 300px;
+}
+
+.row{
+    text-align: center;
+    display: flex;
+    margin-left: 350px;
+}
+
+.row h4{
+    font-size: 20px;
+    color: white;
+
+}
+.row p{
+    font-size: 18px;
+    color: white;
+
+}
