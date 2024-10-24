@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    background-color:white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 200px;
+  }
+  
+  /* Centered Form Container */
+  .problem2 {
+    max-width: 500px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid #c4b5fd;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form Heading */
+  h2 {
+    text-align: center;
+    color: #4b0082;
+  }
+  
+  /* Form Labels and Inputs */
+  label {
+    font-size: 18px;
+    display: block;
+    margin: 10px 0 5px;
+    color: #4b0082;
+  }
+ 
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #c4b5fd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 16px;
+  }
+  
+  /* Radio Buttons Section */
+  .degree-section {
+    margin-top: 10px;
+  }
+  
+  .degree-section input {
+    margin-right: 8px;
+  }
+  
+  .degree-section label {
+    margin-right: 15px;
+    font-size: 16px;
+  }
+  
+  #otherDropdown {
+    margin-top: 10px;
+  }
+  

@@ -1,0 +1,59 @@
+
+<!-- question2-
+    
+    Make an html page having fields like 
+    
+    NAME:
+    ADDRESS:
+    DEGREE:   0 BTECH     0 MTECH    0 MCA  0 OTHERS
+
+    Here on selection Others option, a dropdown should appear below this with options:
+BCA, PGDCA, BCom, MPhil. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Degree Selection Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="problem2">
+    <h2>PROBLEM-2</h2>
+
+    <label for="name">Name:</label>
+    <br>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+<br>
+<br>
+    <label for="address">Address:</label>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+
+    <div class="degree-section">
+      <label>Degree:</label>
+      <label><input type="radio" name="degree" value="Btech" onclick="OtherOptions()"> Btech</label>
+      <label><input type="radio" name="degree" value="Mtech" onclick="OtherOptions()"> Mtech</label>
+      <label><input type="radio" name="degree" value="MCA" onclick="OtherOptions()"> MCA</label>
+      <label><input class="otherradio" type="radio" name="degree" value="Others" onclick="OtherOptions()"> Others</label>
+    </div>
+
+    <div id="otherDropdown" >
+      <label for="otherCourse">Select Other Degree:</label>
+      <select id="otherCourse" name="otherCourse">
+        <option value="BCA">BCA</option>
+        <option value="PGDCA">PGDCA</option>
+        <option value="BCom">BCom</option>
+        <option value="MPhil">MPhil</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="problem2script.js"></script>
+</body>
+</html>
