@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="w-[600px] h-[500px] ml-14 mt-14 bg-gray-300 p-6 rounded-lg">
+        <div class="mb-5">
+            <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+            <input type="text" id="name"
+                class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div class="mb-5">
+            <label for="large-input"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
+            <Textarea id="address" rows="4"
+                class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></Textarea>
+        </div>
+        <div class="mb-5">
+            <label for="large-input"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Degree</label>
+            <input type="radio" name="degree" id="Btech"><label for="Btech" class=" ml-2">BTech</label>
+            <input type="radio" name="degree" id="Mtech"><label for="Mtech" class=" ml-2">MTech</label>
+            <input type="radio" name="degree" id="MCA"><label for="MCA" class=" ml-2">MCA</label>
+            <input type="radio" name="degree" id="others" onclick="selectOption()"><label for="others"
+                class=" ml-2">Others</label>
+
+            <div id="select" class="mt-4"></div>
+        </div>
+
+        <!-- <div class="mb-5">
+            <button class="rounded-full bg-gray-600 px-14 py-3 text-white" onclick="Save()">Save</button>
+        </div> -->
+    </div>
+
+
+
+    <script>
+
+        function Save(){
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function selectOption() {
+            const selectContainer = document.getElementById('select');
+            selectContainer.innerHTML = '';  // Clear any existing dropdowns
+
+            // Create dropdown
+            const select = document.createElement('select');
+            select.className = 'w-70 p-2 border border-gray-300 rounded-lg text-xl';
+
+            // Create the options
+            const options = ['BCA', 'PGDCA', 'BCom', 'MPhil'];
+            options.forEach(optionText => {
+                const option = document.createElement('option');
+                option.value = optionText;
+                option.textContent = optionText;
+                select.appendChild(option);
+            });
+
+            // Append the select element to the selectContainer
+            selectContainer.appendChild(select);
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>

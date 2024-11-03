@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="w-[400px] p-6">
+        <div class="mb-5">
+            <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter
+                Number</label>
+            <input type="text" id="number"
+                class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+
+        <div class="mb-5">
+            <button class="rounded-full bg-gray-600 px-14 py-3 text-white" onclick="Save()">Save</button>
+        </div>
+        <div class="mb-5">
+            <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Array:</label>
+            <h1 id="display"></h1>
+        </div>
+
+        <div class="mb-5">
+            Index:<select name="" id="dropdown"></select>
+        </div>
+        <div class="mb-5" id="index"></div>
+
+
+        <div class="mb-5">
+            Sorted Array:<span id="sort"></span>
+        </div>
+
+
+
+        <div class="mb-5">
+            <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Search
+            </label>
+            <input type="text" id="search"
+                class="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div class="mb-5">
+            <button class="rounded-full bg-gray-600 px-14 py-3 text-white" onclick="Search()">Save</button>
+        </div>
+        <div class="mb-5">
+            <span id="searchResult"></span>
+        </div>
+
+        <div class="mb-5">
+           Reverse Of Array <span id="Reverse"></span>
+        </div>
+
+
+    </div>
+
+    <script>
+
+        const data = [];
+
+        function Save() {
+
+            const n = document.getElementById('number').value;
+            if (n.trim() !== '') {
+                data.push(n);
+                document.getElementById('display').textContent = `[${data}]`;
+                document.getElementById('number').value = ''
+                dropdownButton();
+                arraySort();
+                reverseArray();
+            } else {
+                alert('enter a number!')
+            }
+        }
+        function dropdownButton() {
+
+            const dropdown = document.getElementById('dropdown');
+            dropdown.innerHTML = "";
+            dropdown.onchange = displayArray;
+
+            data.forEach((_, index) => {
+                const option = document.createElement("option");
+                option.value = index;
+                option.textContent = `${index + 1}`;
+                dropdown.appendChild(option);
+            });
+
+        }
+
+        function displayArray() {
+            const display = document.getElementById('index');
+            if (data.length > 0) {
+                const value = document.getElementById('dropdown').value;
+                const item = data[value];
+                display.textContent = item;
+            } else {
+                alert('No students are available');
+            }
+
+
+        }
+
+        function arraySort() {
+            const copy = data;
+            const sortedArray = copy.sort(function (a, b) { return a - b });
+            document.getElementById('sort').textContent = ` [ ${sortedArray} ]`
+        }
+
+        function Search() {
+
+            const search = document.getElementById('search').value;
+
+            if(search.trim() !== ''){
+                for(let i=0; i<=data.length;i++){
+                    if(search === data[i]);
+                    document.getElementById('searchResult').textContent = `Search element found in position:${i}`;
+                }
+            }else{
+                alert('please add Numbers!')
+            }
+        }
+
+        function reverseArray(){
+            const copy = data;
+            document.getElementById('Reverse').textContent = copy.reverse();
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Document</title>  
+   <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+   <div class="div1">  
+      <h2>Store and Display Names</h2>  
+      <label for="name">Name:</label>  
+      <input type="text" id="name" placeholder="Enter a name">  
+      <button onclick="Store()">Save</button>  
+      <select name="" id="dropdown"></select>  
+      <div id="display"></div>  
+   </div>  
+   <script>  
+      const data = [];  
+  
+      function Store() {  
+        const name = document.getElementById('name').value;  
+        if (name.trim() !== '') {  
+           data.push(name);  
+           document.getElementById('name').value = '';  
+           console.log(data)  
+           dropdownButton();  
+        } else {  
+           alert('Please enter a name!')  
+        }  
+      }  
+  
+      function dropdownButton() {  
+  
+        const dropdown = document.getElementById('dropdown');  
+        dropdown.innerHTML = "";  
+        dropdown.onchange = displayArray;  
+  
+        data.forEach((_, index) => {  
+           const option = document.createElement("option");  
+           option.value = index;  
+           option.textContent = `${index + 1}`;  
+           dropdown.appendChild(option);  
+        });  
+  
+      }  
+  
+      function displayArray() {  
+        const display = document.getElementById('display');  
+        if (data.length > 0) {  
+           const value = document.getElementById('dropdown').value;  
+           const item = data[value];  
+           display.textContent=item;  
+        }else{  
+           alert('No students are available');  
+        }  
+      }  
+   </script>  
+</body>  
+</html>

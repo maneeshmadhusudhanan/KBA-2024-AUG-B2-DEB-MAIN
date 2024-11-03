@@ -9,24 +9,89 @@
     
   </head>
   <script>
-          window.onload=async()=>{
-            console.log("hai");
+        window.onload=async()=>{
+            console.log("hi");
             try{
-              const response=await fetch('http://127.0.0.1:8000/viewUser',{
-              method:'GET',
-              Credentials :'include',
-              
             
-          });
-        const data= await response.json();
+           const response=await fetch("http://127.0.0.1:8000/viewUser",{
+            method:'GET',
+           credentials: 'include', 
+            });
+           
+           
+           const data =await response.json();
+           
+           if(data.user=='admin'){
+            
+            document.getElementById("admin").style.display='block';
+            
+           }}
+           catch(error){
+            console.log(error);}
+            
 
-        if(dat.user==='admin'){
-        document.getElementById("admin").style.display='block'
-        }}
-      catch(error){
-        console.log(error);}
-      }
+        }
+        async function viewCourse(){
+            const response=await fetch("http://127.0.0.1:8000/viewCourse",{
+            method:'GET',
+           credentials: 'include', 
+            });
+            console.log(response.status);
+            
+             const data1=await response.json();
+             console.log(data1.length);
+             
+            if(response.status!=404){
+                console.log(data1,"data");
+                const container=document.getElementById("cards")
+                container.innerHTML='';
+                data1.forEach(course => {
+                    console.log(course);
+                    const coursediv=document.createElement("div");
+                    coursediv.style.border='2px solid red';
+                    coursediv.style.width='250px'
 
+                   const coursename=document.createElement("h1");
+                   coursename.id='name';
+                   coursename.value=course[0]
+                   coursename.innerHTML=course[0];
+                   const image=document.createElement("img");
+                   image.src="./download.png";
+                   const description=document.createElement("p");
+                   description.innerHTML=course[1].Description;
+                   const more=document.createElement("input");
+                   more.onclick= function(){
+                    handleMore(course[0]);
+                   };
+                   more.type='submit';
+                   more.value='View More'
+                   more.style.border='2px solid black';
+                   
+                   
+                   coursediv.appendChild(coursename);
+                   coursediv.appendChild(image);
+                   coursediv.appendChild(description);
+                   coursediv.appendChild(more);
+                   container.appendChild(coursediv);
+
+
+
+            })
+            
+        }
+        else{
+            window.location.href='/notfound.html';
+        }
+    }
+    function handleMore(){
+        fetch (`http://127.0.0.1:8000/getCourse?courseName=${more}`)
+            const more=document.getElementById("name").value;
+            console.log(more);
+            localStorage.setItem('course',more);
+            const x=localStorage.getItem('course');
+            window.location.href='/viewCourse.html'
+            
+        }
   </script>
 <body>
    <!-- navbar  -->
@@ -70,4 +135,3 @@
     </div>
 </body>
 </html>
-

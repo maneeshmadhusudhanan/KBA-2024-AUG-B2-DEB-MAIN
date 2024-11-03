@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD COURSE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        window.onload = async () => {
+            try {
+                const resp = await fetch("http://127.0.0.1:8000/viewCourse", {
+                    method: "GET",
+                    credentials: "include",
+                })
+
+                console.log(resp.status);
+
+                const courseid = await localStorage.getItem('course');
+                console.log(courseid)
+
+                const data = await resp.json();
+                console.log(data)
+
+                if (resp.status === 200) {
+                    data.forEach(array => {
+                        console.log(array);
+                        if (array[0] === courseid) {
+                            const cname = document.getElementById('cname');
+                            cname.value = array[1].cname;
+                            const ctype = document.getElementById('cType');
+                            ctype.value = array[1].ctype;
+                            const cdescription = document.getElementById('cDescription');
+                            cdescription.value = array[1].cdescription;
+                            const cprice = document.getElementById('cPrice');
+                            cprice.value = array[1].cprice;
+                        }
+                    });
+                } else {
+                    alert("data not found!")
+                }
+            } catch (error) {
+
+            }
+        }
+
+
+        async function updateCourse() {
+
+            try {
+                const cname = document.getElementById('cname').value;
+                const ctype = document.getElementById('cType').value;
+                const cdescription = document.getElementById('cDescription').value;
+                const cprice = document.getElementById('cPrice').value;
+
+                const courseid = await localStorage.getItem('course');
+
+                if (!courseid) {
+                    alert("No course selected for updating.");
+                    return;
+                }
+
+                const response = await fetch(`http://127.0.0.1:8000/update/${courseid}`, {
+                    method: 'PUT',
+                    credentials:"include",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        cname: cname,
+                        ctype: ctype,
+                        cdescription: cdescription,
+                        cprice: cprice                    })
+                });
+
+                if (response.status == 200) {
+                    alert("Course updated successfully.");
+                    window.location.href = "./viewCourse.html";
+                } else {
+                    alert("Failed to update the course. Please try again.");
+                    console.log("Error status:", response.status);
+                }
+
+
+            } catch (error) {
+                console.error("An error occurred:", error);
+                alert("An unexpected error occurred. Please try again.");
+            }
+
+
+        }
+
+
+
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="m-3 p-4  flex justify-between shadow-2xl">
+        <img src="../images/kbalogo.png" alt="" class="p-2 w-12">
+        <nav>
+            <ul class="flex justify-end p-2">
+                <li class="pr-5"><a href="../index.html" class="text-rose-950 hover:text-gray-400">HOME</a></li>
+                <li class="pr-5"><a href="./courses.html" class="text-rose-950 hover:text-gray-400">COURSE</a></li>
+                <li class="pr-5"><a href="./add_course.html" class="text-rose-950 hover:text-gray-400">ADD COURSE</a>
+                </li>
+                <li class="pr-5"><a href="./contact.html" class="text-rose-950 hover:text-gray-400">CONTACT</a></li>
+                <li class="pr-5"><a href="./login.html" class="text-rose-950 hover:text-gray-400">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="flex justify-center mt-10">
+        <div class="bg-rose-950 w-4/12 max-h-full p-4 mt-3  rounded-xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
+            <H2 class="text-white font-mono text-2xl font-bold text-center">Update Course</H2>
+            <div class="ml-8">
+                <form action="">
+                    <div class="mt-4 pl-5">
+                        <h4 class="text-white">Update Course Name:</h4>
+                        <input type="text" required class="w-96 h-10 " id="cname">
+                    </div>
+
+                    <!-- <div class="mt-4 pl-5">
+                    <h4 class="text-white">Course ID:</h4>
+                    <input type="password" required class="w-96 h-10">
+                </div> -->
+                    <div class="mt-4 pl-5">
+                        <h4 class="text-white">Course Type:</h4>
+                        <select class="w-96 h-10" id="cType">
+                            <option value="SelfPaced" selected>Self-Paced</option>
+                            <option value="Online">Online</option>
+                            <option value="Offline">Offline</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                    <div class="mt-4 pl-5">
+                        <h4 class="text-white">Description:</h4>
+                        <textarea id="cDescription" rows="4" cols="2"
+                            class="block p-2.5 w-96 text-sm text-gray-900 bg-white rounded-lg border"
+                            placeholder="Write your thoughts here..."></textarea>
+                    </div>
+                    <div class="mt-4 pl-5">
+                        <h4 class="text-white">Price</h4>
+                        <input type="text" id="cPrice" placeholder="Enter the Price " required
+                            class="w-80 h-8 text-sm pl-2 rounded-lg shadow-md">
+                    </div>
+
+                    <div class=" mt-5 ml-5  bg-white  rounded-xl  text-center w-96 h-10">
+                        <button class="text-rose-950 p-3 w-32  rounded-xl " onclick="updateCourse()">Add Course</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

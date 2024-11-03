@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <title>Blockchain Courses</title>
+    <script>
+      async function handleForm(){
+        const courseName=document.getElementById("title").value;
+        const courseId=document.getElementById("courseId").value;
+        const  courseType=document.getElementById("type").value;
+        const  description=document.getElementById("description").value;
+        const  price=document.getElementById("price").value;
+        console.log(price);
+        
+        const response=await fetch("http://127.0.0.1:8000/addCourse",{
+          method:'POST',
+          credentials:'include',
+          headers:{
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify({
+            CourseName:courseName, 
+            CourseId:courseId, 
+            CourseType:courseType,
+            Description:description,
+            Price:price
+          })
+        })
+        if(response.status==201){
+          alert("Course added succesfully")
+        }
+        else if(response.status==400){
+          alert("Course already exist")
+        } 
+        
+      }
+    </script>
+  </head>
+<body>
+   <!-- navbar  -->
+    <div class='bg-purple-100 text-purple-950 grid grid-cols-1 md:grid-cols-2 p-3 shadow-md'>
+        <div class='flex items-center'>
+
+            <a href="#" >
+                <img class='m-1p-2 size-12' src="./kbalogo.jpeg" alt="logo" />
+            </a>
+            
+        </div>
+        <div class='flex justify-center md:justify-end items-center mt-2 md:mt-0 space-x-5 md:space-x-10'>
+            <a href="/Homepage.html" class='ml-20'>Home</a>
+            <a href="/viewCourse.html" class='ml-20'>Courses</a>
+            <a href="/contact.html" class='ml-20'>Contact Us</a>
+            <a href="/add-course.html" class='ml-20'>Add Course</a>
+        </div>
+    </div>
+
+  <!-- form - adding new course -->
+
+<section class="bg-white mb-20">
+    <div class="container m-auto max-w-2xl py-2">
+      <div class="bg-purple-100 px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
+        
+        <form >
+          <h2 class="text-3xl text-purple-800 text-center font-semibold mb-6">
+            Add Course
+          </h2>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2">
+              Course Name
+            </label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="Enter in Capital Letters"
+              required
+              
+            />
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2">
+              Course Id
+            </label>
+            <input
+              type="text"
+              id="courseId"
+              name="courseId"
+              class="border rounded w-full py-2 px-3 mb-2"
+              placeholder="eg. 1"
+              required
+              
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              htmlFor="type"
+              class="block text-gray-700 font-bold mb-2"
+            >
+              Course Type
+            </label>
+            <select
+              id="type"
+              name="type"
+              class="border rounded w-full py-2 px-3"
+              required
+            
+            >
+              <option value="Self-Paced">Self-Paced</option>
+              <option value="Instructor-Led">Instructor-Led</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label
+              htmlFor="description"
+              class="block text-gray-700 font-bold mb-2"
+            >
+              Description
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              class="border rounded w-full py-2 px-3"
+              rows="4"
+              placeholder="Small description on the course"
+            
+            ></textarea>
+          </div>
+
+          <div class="mb-4">
+            <label
+              htmlFor="type"
+              class="block text-gray-700 font-bold mb-2"
+            >
+              Price
+            </label>
+            <select
+              id="price"
+              name="price"
+              class="border rounded w-full py-2 px-3"
+              required
+              
+            >
+              <option value="5000">Rs.5000</option>
+              <option value="3500">Rs.3500</option>
+              <option value="15000">Rs.15000</option>
+            </select>
+          </div>
+
+          <div>
+            <button
+              class="bg-purple-500 hover:bg-purple-600 my-10  text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+              type="submit" onclick="handleForm()"
+            >
+              Add Course
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

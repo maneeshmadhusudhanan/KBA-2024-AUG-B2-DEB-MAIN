@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More</title>
+    <link rel="stylesheet" href="/stylecss/learn.css">
+    <script>
+        let name;
+        window.onload=async()=>{
+            console.log("hi");
+            try{
+            
+           const response1=await fetch("http://127.0.0.1:8000/viewUser",{
+            method:'GET',
+           credentials: 'include', 
+            });
+           
+           
+           const data1 =await response1.json();
+           
+           if(data1.user=='admin'){
+            
+            document.getElementById("admin").style.display='block';
+            
+           }}
+           catch(error){
+            console.log(error);}
+            
+             name=localStorage.getItem('course');
+            console.log(name);
+            const response=await fetch(`http://127.0.0.1:8000/getCourse?courseName=${name}`);
+            console.log(response);
+            const data=await response.json();
+            if(data){
+            console.log(data);
+            document.getElementById("name").innerHTML=name;
+            document.getElementById("price").innerHTML=data.Price;
+            document.getElementById("description").innerHTML=data.Description;
+            }
+            else{
+                window.location.href='/notfound.html';
+            }
+        }
+        function gotoPage(){
+            window.location.href='/edit-course.html'
+        }
+        async function deleteCourse(){
+            console.log(name);
+            
+            const response=await fetch(`http://127.0.0.1:8000/deleteCourse/${name}`,{
+                method:'DELETE',
+                credentials:"include",
+               
+            });
+            console.log(response.status);
+            if(response.status==200){
+                alert(`${name} course deleted`);
+            }
+            else if(response.status==400){
+                console.log(response);
+                
+            }
+            else{
+                window.location.href='/notfound.html'
+            }
+            
+        }
+        async function logout(){
+            console.log("hello");
+            
+            const response= await fetch("http://127.0.0.1:8000/logout");
+            const data = await response.json();
+            if(response.status==200){
+                window.location.href='/login.html'
+            }
+            else{
+                alert("Try after some time")
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="div1"><img src="banner-kba.png" alt=""></div>
+        <div class="div2" class='flex justify-center md:justify-end items-center mt-2 md:mt-0 space-x-5 md:space-x-10' >
+        <a class='ml-20' href="/Homepage.html">Home</a>
+        <a class='ml-20' href="courses.html">Courses</a>
+        <a class='ml-20' href="contact.html">Contact Us </a>
+        <a class='ml-20' href="/add-course.html" style="display: none;">Add Course</a>
+        <a class='ml-20' href="#" onclick="logout()">Logout</a>
+        </div>
+    
+    </nav>
+     <br>
+     <a href="" class="btc">Back to course</a>
+     <br>
+     <br>
+     <div class="container">
+       <img src="" alt="">
+        
+               <div class="line">
+                <div class="frist">
+                    <h4 id="name" class="head2">s122</h4>
+                </div>
+                <div class="fristsub">
+                    <div class="sec">
+                    <h3 id="price">RS 15000</h1>    
+                </div>
+          
+          
+                <button class="button1" type="submit" value="Add to cart">Add to Cart</button>
+  
+                </div>
+
+               </div>
+            
+               <div class="descontainer">
+
+        <h2 class="head2">Description</h2>
+        <p id="description">11q</p>
+        <h2 class="head2">prerequisites</h2>
+        <ul class="ulist">
+            <li>Basic understanding of blockchain technology.</li>
+            <li>Famililarity with programming languages.</li>
+            <li>Internet access.</li>
+        </ul>
+        <h2 class="head2">Fetures</h2>
+        <ul  class="ulist">
+            <li>40 hours of content.</li>
+            <li>certificate of completion.</li>
+            <li>Access to community forums.</li>
+            <li>Downloadable resourcses.</li>
+            <li>24/7 support.</li>
+        </ul>
+    </div>
+     </div>
+     <div class="buttonset"> 
+        <button class="buttonblue" type="submit" value="Edit Course" onclick="gotoPage()"> Edit Course</button>
+        <button class="buttonred" type="submit" value="Remove Course" onclick="deleteCourse()"> Remove Course</button>
+     </div>
+</body>
+</html>

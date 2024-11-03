@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+   
+    <div class="bg-yellow-600 p-8 rounded-[30px] shadow-lg w-90">
+        <div class="flex justify-center"><span class="text-center text-white">Calculator</span> </div>
+        
+        <input type="text" id="display" class="w-full text-right text-2xl p-4 mb-4 bg-yellow-300 rounded-lg" disabled>
+        <div class="grid grid-cols-4 gap-4">
+            <!-- Row 1 -->
+            <button onclick="appendToDisplay('1')" class="bg-gray-300 rounded-lg p-4">1</button>
+            <button onclick="appendToDisplay('2')" class="bg-gray-300 rounded-lg p-4">2</button>
+            <button onclick="appendToDisplay('3')" class="bg-gray-300 rounded-lg p-4">3</button>
+            <button onclick="appendToDisplay('+')" class="bg-gray-300  rounded-lg p-4">+</button>
+
+            <button onclick="appendToDisplay('4')" class="bg-gray-300 rounded-lg p-4">4</button>
+            <button onclick="appendToDisplay('5')" class="bg-gray-300 rounded-lg p-4">5</button>
+            <button onclick="appendToDisplay('6')" class="bg-gray-300 rounded-lg p-4">6</button>
+            <button onclick="appendToDisplay('-')" class="bg-gray-300  rounded-lg p-4">-</button>
+
+            <button onclick="appendToDisplay('7')" class="bg-gray-300 rounded-lg p-4">7</button>
+            <button onclick="appendToDisplay('8')" class="bg-gray-300 rounded-lg p-4">8</button>
+            <button onclick="appendToDisplay('9')" class="bg-gray-300 rounded-lg p-4">9</button>
+            <button onclick="appendToDisplay('*')" class="bg-gray-300  rounded-lg p-4">*</button>
+
+            <button onclick="appendToDisplay('.')"  class=" bg-gray-300 rounded-lg p-4">.</button>
+            <button onclick="appendToDisplay('0')" class=" bg-gray-300 rounded-lg p-4 ">0</button>
+            <button onclick="appendToDisplay('%')" class="bg-gray-300 rounded-lg p-4">%</button>
+            <button onclick="appendToDisplay('/')" class="bg-gray-300  rounded-lg p-4">/</button>
+           
+            
+            <button onclick="deleteLast()" class="bg-red-500 text-white rounded-lg p-4">DEL</button>
+            <button onclick="clearDisplay()"  class="bg-green-500 text-white rounded-lg p-4">c</button>
+            <button onclick="calculate()" class="bg-gray-300 col-span-2 rounded-lg p-4">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+
+        function appendToDisplay(value) {
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function deleteLast() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculate() {
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Error';
+            }
+        }
+    </script>
+
+</body>
+</html>

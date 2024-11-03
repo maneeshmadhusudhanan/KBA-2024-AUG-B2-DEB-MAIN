@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-100 min-h-screen flex justify-center items-center">
+
+    <div class="flex flex-wrap justify-center space-x-5">
+
+        <!-- Square Area Calculator -->
+        <div class="w-[350px] bg-white p-8 shadow-lg rounded-lg">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-semibold text-blue-600">Area of Square</h2>
+            </div>
+            <div class="mb-4">
+                <label for="side" class="block text-sm font-medium text-gray-700">Side Length</label>
+                <input type="number" id="side" class="w-full p-3 mt-1 border rounded-lg focus:ring-blue-600 focus:border-blue-600" />
+            </div>
+            <button class="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-500" onclick="calculateSquare()">Calculate</button>
+            <div class="mt-4 text-xl text-center text-blue-700" id="result1"></div>
+        </div>
+
+        <!-- Rectangle Area Calculator -->
+        <div class="w-[350px] bg-white p-8 shadow-lg rounded-lg">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-semibold text-blue-600">Area of Rectangle</h2>
+            </div>
+            <div class="mb-4">
+                <label for="length" class="block text-sm font-medium text-gray-700">Length</label>
+                <input type="number" id="length" class="w-full p-3 mt-1 border rounded-lg focus:ring-blue-600 focus:border-blue-600" />
+            </div>
+            <div class="mb-4">
+                <label for="breadth" class="block text-sm font-medium text-gray-700">Breadth</label>
+                <input type="number" id="breadth" class="w-full p-3 mt-1 border rounded-lg focus:ring-blue-600 focus:border-blue-600" />
+            </div>
+            <button class="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-500" onclick="calculateRectangle()">Calculate</button>
+            <div class="mt-4 text-xl text-center text-blue-700" id="result2"></div>
+        </div>
+
+        <!-- Circle Area Calculator -->
+        <div class="w-[350px] bg-white p-8 shadow-lg rounded-lg">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-semibold text-blue-600">Area of Circle</h2>
+            </div>
+            <div class="mb-4">
+                <label for="radius" class="block text-sm font-medium text-gray-700">Radius</label>
+                <input type="number" id="radius" class="w-full p-3 mt-1 border rounded-lg focus:ring-blue-600 focus:border-blue-600" />
+            </div>
+            <button class="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-500" onclick="calculateCircle()">Calculate</button>
+            <div class="mt-4 text-xl text-center text-blue-700" id="result3"></div>
+        </div>
+
+    </div>
+
+    <script>
+        function calculateSquare() {
+            const side = document.getElementById('side').value;
+            const area = side * side;
+            document.getElementById('result1').innerText = `Area: ${area}`;
+        }
+
+        function calculateRectangle() {
+            const length = document.getElementById('length').value;
+            const breadth = document.getElementById('breadth').value;
+            const area = length * breadth;
+            document.getElementById('result2').innerText = `Area: ${area}`;
+        }
+
+        function calculateCircle() {
+            const radius = document.getElementById('radius').value;
+            const area = Math.PI * radius * radius;
+            document.getElementById('result3').innerText = `Area: ${area.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+
+</html>

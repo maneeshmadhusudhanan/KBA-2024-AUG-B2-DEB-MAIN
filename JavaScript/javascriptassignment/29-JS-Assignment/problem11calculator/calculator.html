@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .calculator {
+            background-color: #f8ecec;
+            border-radius: 15px;
+            border-top-right-radius: 90px;
+            border-top-left-radius: 90px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .calculator-screen {
+            width: 260px;
+            height: 90px;
+            background-color: #bbdefb;
+            border: none;
+            border-radius: 5px;
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+            margin-bottom: 15px;
+            font-size: 24px;
+            padding: 10px;
+            text-align: right;
+            box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator-keys {
+            height: 340px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 7px;
+        }
+
+        .calculator-key {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            padding: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .calculator-key:hover {
+            background-color: #388e3c;
+        }
+
+        .operator-key {
+            background-color: #1976d2;
+        }
+
+        .operator-key:hover {
+            background-color: #1565c0;
+        }
+
+        .calculator1 {
+            width: 280px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+<h2 class="">CALCULATOR</h2>
+<br>
+<div class="calculator">
+    <input type="text" class="calculator-screen" id="screen" value="0" disabled />
+    <div class="calculator1">
+        <div class="calculator-keys">
+            <button class="calculator-key" value="7">7</button>
+            <button class="calculator-key" value="8">8</button>
+            <button class="calculator-key" value="9">9</button>
+            <button class="calculator-key operator-key" value="/">/</button>
+
+            <button class="calculator-key" value="4">4</button>
+            <button class="calculator-key" value="5">5</button>
+            <button class="calculator-key" value="6">6</button>
+            <button class="calculator-key operator-key" value="*">*</button>
+
+            <button class="calculator-key" value="1">1</button>
+            <button class="calculator-key" value="2">2</button>
+            <button class="calculator-key" value="3">3</button>
+            <button class="calculator-key operator-key" value="-">-</button>
+
+            <button class="calculator-key" value="0">0</button>
+            <button class="calculator-key" value=".">.</button>
+            <button class="calculator-key operator-key" id="equals" value="=">=</button>
+            <button class="calculator-key operator-key" value="+">+</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const screen = document.getElementById('screen');
+    let currentInput = '';
+    let operator = '';
+    let firstOperand = null;
+
+    // Function to handle number and operator clicks
+    function inputKey(value) {
+        if (value === '+' || value === '-' || value === '*' || value === '/') {
+            if (firstOperand === null) {
+                firstOperand = parseFloat(currentInput);
+                operator = value;
+                currentInput = '';
+            }
+        } else if (value === '=') {
+            if (operator && currentInput !== '') {
+                const secondOperand = parseFloat(currentInput);
+                currentInput = calculate(firstOperand, secondOperand, operator).toString();
+                firstOperand = null;
+                operator = '';
+            }
+        } else {
+            currentInput += value;
+        }
+        screen.value = currentInput || '0';
+    }
+
+    // Function to perform the calculations
+    function calculate(a, b, operator) {
+        switch (operator) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+            default:
+                return b;
+        }
+    }
+
+    // Adding event listeners to all keys
+    const keys = document.querySelectorAll('.calculator-key');
+    keys.forEach(key => {
+        key.addEventListener('click', () => inputKey(key.value));
+    });
+</script>
+
+</body>
+</html>

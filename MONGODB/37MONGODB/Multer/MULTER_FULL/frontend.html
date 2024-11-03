@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Retrieve</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h1>Retrieve Image</h1>
+    <form id="retrieveForm">
+        <label for="imageId">Enter Image ID:</label>
+        <input type="text" id="imageId" name="imageId" required>
+        <button type="submit">Retrieve Image</button>
+    </form>
+
+    <img id="retrievedImage" src="" alt="Retrieved Image" style="display: none; max-width: 500px;">
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            const formData = new FormData();
+            formData.append('image', document.getElementById('imageInput').files[0]);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // Alert with the success message and Image ID
+            })
+            .catch(error => {
+                console.error('Error uploading image:', error);
+            });
+        });
+
+        document.getElementById('retrieveForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            const imageId = document.getElementById('imageId').value;
+            fetch(`/image/${imageId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Image not found');
+                    }
+                    return response.blob();
+                })
+                .then(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const imgElement = document.getElementById('retrievedImage');
+                    imgElement.src = url;
+                    imgElement.style.display = 'block'; // Make the image visible
+                })
+                .catch(error => {
+                    console.error('Error retrieving image:', error);
+                    alert('Error retrieving image: ' + error.message);
+                });
+        });
+    </script>
+</body>
+</html>

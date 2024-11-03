@@ -1,0 +1,100 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+   <meta charset="UTF-8">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <title>Document</title>  
+   <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+   <div class="div1">  
+      <h2>Store and Display Numbers</h2>  
+      <label for="number">Enter Number:</label>  
+      <input type="text" id="number" placeholder="Enter a number">  
+      <button onclick="Save()">Save</button>  
+      <label for="display">Array:</label>  
+      <h1 id="display"></h1>  
+      <label for="dropdown">Index:</label>  
+      <select name="" id="dropdown"></select>  
+      <div id="index"></div>  
+      <label for="sort">Sorted Array:</label>  
+      <span id="sort"></span>  
+      <label for="search">Search:</label>  
+      <input type="text" id="search" placeholder="Enter a number to search">  
+      <button onclick="Search()">Search</button>  
+      <span id="searchResult"></span>  
+      <label for="Reverse">Reverse Of Array:</label>  
+      <span id="Reverse"></span>  
+   </div>  
+   <script>  
+      const data = [];  
+  
+      function Save() {  
+  
+        const n = document.getElementById('number').value;  
+        if (n.trim() !== '') {  
+           data.push(n);  
+           document.getElementById('display').textContent = `[${data}]`;  
+           document.getElementById('number').value = ''  
+           dropdownButton();  
+           arraySort();  
+           reverseArray();  
+        } else {  
+           alert('enter a number!')  
+        }  
+      }  
+      function dropdownButton() {  
+  
+        const dropdown = document.getElementById('dropdown');  
+        dropdown.innerHTML = "";  
+        dropdown.onchange = displayArray;  
+  
+        data.forEach((_, index) => {  
+           const option = document.createElement("option");  
+           option.value = index;  
+           option.textContent = `${index + 1}`;  
+           dropdown.appendChild(option);  
+        });  
+  
+      }  
+  
+      function displayArray() {  
+        const display = document.getElementById('index');  
+        if (data.length > 0) {  
+           const value = document.getElementById('dropdown').value;  
+           const item = data[value];  
+           display.textContent = item;  
+        } else {  
+           alert('No students are available');  
+        }  
+  
+  
+      }  
+  
+      function arraySort() {  
+        const copy = data;  
+        const sortedArray = copy.sort(function (a, b) { return a - b });  
+        document.getElementById('sort').textContent = ` [ ${sortedArray} ]`  
+      }  
+  
+      function Search() {  
+  
+        const search = document.getElementById('search').value;  
+  
+        if(search.trim() !== ''){  
+           for(let i=0; i<=data.length;i++){  
+              if(search === data[i]);  
+              document.getElementById('searchResult').textContent = `Searched NUMBER found in position:${i}`;  
+           }  
+        }else{  
+           alert('please add Numbers!')  
+        }  
+      }  
+  
+      function reverseArray(){  
+        const copy = data;  
+        document.getElementById('Reverse').textContent = copy.reverse();  
+      }  
+   </script>  
+</body>  
+</html>

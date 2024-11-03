@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-blue-50 min-h-screen flex items-center justify-center">
+
+    <div class="w-[400px] p-8 shadow-xl bg-white rounded-lg">
+
+        <!-- Name Input -->
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-blue-500">Enter Name</label>
+            <input type="text" id="name"
+                class="block w-full p-4 text-blue-500 border border-blue-500 rounded-lg bg-blue-100 focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Mark Input -->
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-blue-500">Enter Mark</label>
+            <input type="number" id="mark"
+                class="block w-full p-4 text-blue-500 border border-blue-500 rounded-lg bg-blue-100 focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Add Mark Button -->
+        <div class="mb-10">
+            <button class="rounded-full bg-blue-500 px-14 py-3 text-white hover:bg-blue-600" onclick="dataSave()">Add Mark</button>
+        </div>
+
+        <!-- Class Average Mark -->
+        <div class="mb-10">
+            <label class="block mb-2 text-sm font-medium text-blue-500">Class Average Mark:</label>
+            <h2 id="avgMark" class="text-xl text-blue-600"></h2>
+            <button class="rounded-full bg-blue-500 px-14 py-3 text-white hover:bg-blue-600 mt-3" onclick="markAvg()">Avg Mark</button>
+        </div>
+
+        <!-- Search Student -->
+        <div class="mb-5">
+            <label class="block mb-2 text-sm font-medium text-blue-500">Search Student Name</label>
+            <input type="text" id="search"
+                class="block w-full p-4 text-blue-500 border border-blue-500 rounded-lg bg-blue-100 focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <div class="mb-5">
+            <button class="rounded-full bg-blue-500 px-14 py-3 text-white hover:bg-blue-600" onclick="search()">Submit</button>
+        </div>
+
+        <h1 id="display" class="text-xl text-blue-600 font-semibold"></h1>
+
+    </div>
+
+    <script>
+        const students = [];
+
+        function dataSave() {
+            const Name = document.getElementById('name').value;
+            const Mark = Number(document.getElementById('mark').value);
+
+            if (Name && !isNaN(Mark) && Mark >= 0 && Mark <= 100) {
+                students.push({ name: Name, mark: Mark });
+                console.log(Name, Mark);
+                document.getElementById('name').value = '';
+                document.getElementById('mark').value = '';
+            } else {
+                alert("Please enter a valid name and mark between 0 and 100.");
+            }
+        }
+
+        function markAvg() {
+            if (students.length > 0) {
+                const total = students.reduce((sum, student) => sum + student.mark, 0);
+                const average = total / students.length;
+                document.getElementById('avgMark').innerHTML = average.toFixed(2);
+            } else {
+                document.getElementById('avgMark').innerHTML = "No marks entered yet.";
+            }
+        }
+
+        function search() {
+            const searchName = document.getElementById('search').value.trim();
+            const student = students.find(item => item.name.toLowerCase() === searchName.toLowerCase());
+
+            if (student) {
+                const g = grade(student.mark);
+                document.getElementById('display').innerHTML = `${student.name}'s Grade: ${g}`;
+            } else {
+                document.getElementById('display').innerHTML = `Student ${searchName} not found.`;
+            }
+        }
+
+        function grade(mark) {
+            if (mark >= 90) return 'A';
+            if (mark >= 80) return 'B';
+            if (mark >= 70) return 'C';
+            if (mark >= 60) return 'D';
+            return 'F';
+        }
+    </script>
+
+</body>
+
+</html>

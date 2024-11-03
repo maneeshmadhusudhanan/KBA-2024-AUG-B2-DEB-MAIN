@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD COURSE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f3e8ff] flex justify-center items-center min-h-screen">
+
+    <!-- Container for the form -->
+    <div class="bg-white shadow-lg rounded-lg p-8 w-[600px]">
+
+        <!-- Header -->
+        <h2 class="text-center text-3xl font-bold text-[#8f34eb] mb-8">Add Course</h2>
+
+        <!-- Form -->
+        <form action="">
+
+            <!-- Course Name -->
+            <div class="mb-4">
+                <label class="block text-purple-900 font-semibold mb-2">Course Name:</label>
+                <input type="text" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#8f34eb]" placeholder="eg. Certified Blockchain Associate" required>
+            </div>
+
+            <!-- Course ID -->
+            <div class="mb-4">
+                <label class="block text-purple-900 font-semibold mb-2">Course ID:</label>
+                <input type="text" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#8f34eb]" placeholder="eg. 1" required>
+            </div>
+
+            <!-- Course Type -->
+            <div class="mb-4">
+                <label class="block text-purple-900 font-semibold mb-2">Course Type</label>
+                <select class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#8f34eb]">
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Online">Online</option>
+                    <option value="Offline">Offline</option>
+                </select>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-4">
+                <label class="block text-purple-900 font-semibold mb-2">Description</label>
+                <textarea class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#8f34eb]" placeholder="Small description on the course"></textarea>
+            </div>
+
+            <!-- Price -->
+            <div class="mb-4">
+                <label class="block text-purple-900 font-semibold mb-2">Price</label>
+                <select class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-[#8f34eb]">
+                    <option value="1500">Rs.1500</option>
+                    <option value="2000">Rs.2000</option>
+                    <option value="5000">Rs.5000</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <input type="submit" value="Add Course" class="bg-[#a374f7] text-white font-bold py-2 px-6 rounded-md hover:bg-[#8f34eb] cursor-pointer transition duration-300">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

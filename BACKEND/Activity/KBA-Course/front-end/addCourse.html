@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Blockchain Academy</title>
+    <!-- <link rel="stylesheet" href="css/addcourse.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        async function addCourse() {
+
+            try {
+                const cname = document.getElementById('cName').value;
+                const cId = document.getElementById('cID').value;
+                const cType = document.getElementById('cType').value;
+                const cDescription = document.getElementById('cDescription').value;
+                const cPrice = document.getElementById('cPrice').value;
+
+                console.log(cname, cId, cType, cDescription, cPrice);
+
+                const response = await fetch('http://127.0.0.1:8000/addCourse', {
+                    method: "POST",
+                    credentials: "include",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        cid: cId,
+                        cname: cname,
+                        ctype: cType,
+                        cdescription: cDescription,
+                        cprice: cPrice
+                    })
+                });
+
+
+                console.log(response);
+                if (response.status === 200) {
+
+                    alert('Course added !');
+
+                    document.getElementById('cName').value = '';
+                    document.getElementById('cID').value = '';
+                    document.getElementById('cType').value = '';
+                    document.getElementById('cDescription').value = '';
+                    document.getElementById('cPrice').value = '';
+                }else{
+                    alert('data not found!')
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+    <div class="w-full flex flex-right h-15 bg-purple-200 shadow-xl">
+        <img src="logo.png" class="w-10 h-10 pt-2 pl-2">
+        <div class=" w-full text-right p-4">
+            <a href="homepage_htmlfile.html" class="mr-8 w-16 h-10 text-sm hover:text-fuchsia-800">Home</a>
+            <a href="Courses.html" class="mr-8 hover:text-fuchsia-800 w-16 text-sm">Courses</a>
+            <a href="Contact US.html" class="mr-8 hover:text-fuchsia-800 w-16 text-sm">Contact US</a>
+            <a href="Add courses.html" class="mr-8 hover:text-fuchsia-800 w-16 text-sm">Add Courses</a>
+            <a href="Signup.html" class="mr-8 hover:text-fuchsia-800 w-16 text-sm">Signup</a>
+        </div>
+    </div>
+    <div class="flex justify-center">
+        <div class="bg-purple-200 py-14 w-5/12 pt-2 rounded-lg shadow-xl bg-purple-200 mb-10 mt-6 ">
+            <div class="text-center mt-8 text-2xl font-bold">
+                <h3>Add Courses</h3>
+            </div>
+            <div class="flex justify-center  mt-10">
+                <form>
+                    <h4>Course name</h4>
+                    <input type="text" id="cName" placeholder="eg. Certified Blockchain Associate" required
+                        class="w-80 h-8 text-sm pl-2 rounded-lg shadow-md">
+                    <div class="pt-4">
+                        <h4>Course Id</h4>
+                        <input type="text" id="cID" placeholder="eg. 1"
+                            class="w-80 h-8 text-sm pl-2 rounded-lg shadow-md">
+                    </div>
+                    <div class="pt-4">
+                        <h4>Course Type</h4>
+                        <select name="course" id="cType" class="w-80 h-8 rounded-lg shadow-md text-sm">
+                            <option value="SelfPaced" selected>Self-Paced</option>
+                            <option value="Online">Online</option>
+                            <option value="Offline">Offline</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                    <div class="pt-4">
+                        <h4>Description</h4>
+                        <textarea id="cDescription" placeholder="Small description on the course"
+                            class="w-80 h-28 text-sm pl-2 rounded-lg shadow-md"></textarea>
+                    </div>
+                    <div class="pt-4">
+                        <h4> Price</h4>
+                        <input type="text" id="cPrice" placeholder="Enter the Price " required
+                            class="w-80 h-8 text-sm pl-2 rounded-lg shadow-md">
+                    </div>
+                    <div class="pt-4">
+                        <input type="button" onclick="addCourse()" value="Add course"
+                            class="pt-2 bg-purple-300 w-80 pb-2 rounded-lg shadow-md">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
