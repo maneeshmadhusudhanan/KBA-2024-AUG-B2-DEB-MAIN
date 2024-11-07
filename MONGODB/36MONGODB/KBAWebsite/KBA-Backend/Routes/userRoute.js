@@ -3,7 +3,7 @@ import authenticate from "../Middleware/auth.js";
 // import { course } from "./adminRoute.js";
 const userRoute=Router();
 const cart=new Map();
-userRoute.put('/addCart', authenticate, async (req, res) => {
+userRoute.post('/addCart', authenticate, async (req, res) => {
 
     const UserRole = req.userrole;
     const UserName = req.username;
