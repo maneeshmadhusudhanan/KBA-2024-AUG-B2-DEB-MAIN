@@ -1,0 +1,85 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/Css/LibrayApp/Libimages/Hp!.jpg);
+    background-size: cover;
+    background-position: center;
+
+
+
+}
+
+.nav{
+    width:auto;
+    height: 100px;
+    /* box-shadow: 10px 10px  #5f6857;*/
+    background-color:#27211d;
+    opacity: .7;
+    border-radius: 10px;
+    
+    
+}
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin-top: 35px;
+    margin-right: 10px;
+    margin-top: 40px;
+
+
+
+    
+ }
+.nav ul li{
+    font-size: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    
+}
+.screen{
+    box-shadow: 10px 10px 5px #27211d;;
+    text-align: justify;
+    width: 500px;
+    height: 700px;
+    background-color: #c5ae98;
+    border-radius: 30px;
+    margin-left: 800px;
+    margin-top: 80px;
+    padding: 30px;
+    opacity: .9;
+    color:#2c1201;
+    
+
+}
+.Addbook{
+    margin: 20px;
+    margin-left: 100px;
+
+
+}
+.Addbook input{
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    opacity: .7;
+    }
+    
+.Addbook p{
+    font-size: 22px;
+}
+.nav ul li a:hover{
+
+    text-decoration: none;
+    font-size: 25px;
+    color:#d16264;
+
+}
