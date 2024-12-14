@@ -1,0 +1,27 @@
+{
+  "name": "hardhatsmartcerticate",
+  "version": "1.0.0",
+  "description": "building smartcertificate using hardhat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maneeshmadhusudhanan/KBA-2024-AUG-B2-DEB-MAIN.git"
+  },
+  "author": "MANEESH DEV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maneeshmadhusudhanan/KBA-2024-AUG-B2-DEB-MAIN/issues"
+  },
+  "homepage": "https://github.com/maneeshmadhusudhanan/KBA-2024-AUG-B2-DEB-MAIN#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.17"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mocha": "^11.0.1"
+  }
+}
